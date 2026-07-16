@@ -1,0 +1,23 @@
+/* Brutalist borders and customized scrollbar using the soft vinotinto/crema palette */
+        .brutal-border {
+            border: 2px solid #832C35;
+        }
+        .brutal-shadow {
+            box-shadow: 4px 4px 0px 0px #832C35;
+        }
+        .brutal-shadow-dark {
+            box-shadow: 4px 4px 0px 0px #4E1218;
+        }
+        ::-webkit-scrollbar {
+            width: 8px;
+        }
+        ::-webkit-scrollbar-track {
+            background: #FDFBF7;
+        }
+        ::-webkit-scrollbar-thumb {
+            background: #832C35;
+            border-radius: 4px;
+        }
+        ::-webkit-scrollbar-thumb:hover {
+            background: #4E1218;
+        }

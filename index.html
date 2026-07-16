@@ -1,0 +1,822 @@
+<!DOCTYPE html>
+<html lang="es" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>¿Cuánto cuesta vivir como quiero vivir? - Estefani Peña</title>
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Fuentes -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,300;0,400;0,600;0,700;0,900;1,400&family=Space+Grotesk:wght@400;500;700&display=swap" rel="stylesheet">
+    <script src="assets/js/tailwind-config.js"></script>
+    <link rel="stylesheet" href="assets/css/styles.css">
+</head>
+<body class="bg-crema-light text-textdark font-sans selection:bg-vinotinto/20 selection:text-vinotinto-dark">
+
+    <!-- HEADER / NAVIGATION -->
+    <header class="sticky top-0 z-50 bg-crema-light/90 backdrop-blur-md border-b-2 border-vinotinto">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between">
+            <a href="#inicio" class="font-display font-bold text-lg md:text-xl text-vinotinto-dark tracking-wider flex items-center gap-2">
+                <span class="text-vinotinto">&lt;</span>
+                ESTEFANI PEÑA
+                <span class="text-vinotinto">&gt;</span>
+            </a>
+            
+            <!-- Desktop Nav -->
+            <nav class="hidden lg:flex items-center space-x-6 text-sm font-semibold tracking-wide">
+                <a href="#inicio" class="text-textdark hover:text-vinotinto transition-colors py-2">Inicio</a>
+                <a href="#proyecto-vida" class="text-textdark hover:text-vinotinto transition-colors py-2">Proyecto de Vida</a>
+                <a href="#costo-vida" class="text-textdark hover:text-vinotinto transition-colors py-2">Presupuesto</a>
+                <a href="#ingreso-requerido" class="text-textdark hover:text-vinotinto transition-colors py-2">Cifra Central</a>
+                <a href="#ruta-profesional" class="text-textdark hover:text-vinotinto transition-colors py-2">Ruta Profesional</a>
+                <a href="#formacion" class="text-textdark hover:text-vinotinto transition-colors py-2">Formación</a>
+                <a href="#evidencias" class="text-textdark hover:text-vinotinto transition-colors py-2">Evidencias IA</a>
+                <a href="#reflexion" class="text-crema-light hover:bg-vinotinto-dark bg-vinotinto px-4 py-2 rounded-lg brutal-shadow transition-all text-xs font-bold uppercase tracking-wider">Reflexión Final</a>
+            </nav>
+
+            <!-- Mobile Nav Toggle -->
+            <button id="mobile-menu-btn" class="lg:hidden text-vinotinto-dark focus:outline-none" aria-label="Abrir menú">
+                <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path id="menu-icon" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+                </svg>
+            </button>
+        </div>
+
+        <!-- Mobile Menu Container -->
+        <div id="mobile-menu" class="hidden lg:hidden bg-crema border-b-2 border-vinotinto px-4 pt-2 pb-6 space-y-3">
+            <a href="#inicio" class="block text-textdark hover:text-vinotinto py-2 font-medium">Inicio</a>
+            <a href="#proyecto-vida" class="block text-textdark hover:text-vinotinto py-2 font-medium">Proyecto de Vida</a>
+            <a href="#costo-vida" class="block text-textdark hover:text-vinotinto py-2 font-medium">Presupuesto</a>
+            <a href="#ingreso-requerido" class="block text-textdark hover:text-vinotinto py-2 font-medium">Cifra Central</a>
+            <a href="#ruta-profesional" class="block text-textdark hover:text-vinotinto py-2 font-medium">Ruta Profesional</a>
+            <a href="#formacion" class="block text-textdark hover:text-vinotinto py-2 font-medium">Formación</a>
+            <a href="#evidencias" class="block text-textdark hover:text-vinotinto py-2 font-medium">Evidencias IA</a>
+            <a href="#reflexion" class="block text-crema-light bg-vinotinto hover:bg-vinotinto-dark px-3 py-2 rounded font-semibold text-center border border-vinotinto">Reflexión Final</a>
+        </div>
+    </header>
+
+    <!-- MAIN CONTAINER -->
+    <main class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8 space-y-24">
+
+        <!-- 1. PORTADA / INICIO -->
+        <section id="inicio" class="min-h-[80vh] flex flex-col justify-center items-center py-12 lg:py-20 relative">
+            <div class="absolute -top-10 left-10 w-48 h-48 bg-vinotinto/5 rounded-full blur-3xl pointer-events-none"></div>
+            <div class="absolute bottom-10 right-10 w-64 h-64 bg-crema-dark/45 rounded-full blur-3xl pointer-events-none"></div>
+
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center w-full relative z-10">
+                <!-- Text Area -->
+                <div class="lg:col-span-7 space-y-6 text-left">
+                    <span class="inline-block bg-crema-dark text-vinotinto-dark font-mono text-xs md:text-sm px-4 py-1.5 rounded-lg border border-vinotinto/30 font-semibold uppercase tracking-widest">
+                        Proyecto de Ética y Finanzas Personales
+                    </span>
+                    <h1 class="text-4xl sm:text-5xl md:text-6xl font-display font-black tracking-tight text-vinotinto-dark leading-tight">
+                        ¿Cuánto cuesta <br>
+                        <span class="text-transparent bg-clip-text bg-gradient-to-r from-vinotinto to-vinotinto-light">
+                            vivir como quiero?
+                        </span>
+                    </h1>
+                    <p class="text-softgray text-base md:text-lg max-w-xl leading-relaxed">
+                        Un análisis financiero profundo y un plan de acción estructurado con inteligencia artificial para diseñar, cotizar y proyectar la viabilidad de mi estilo de vida ideal a los 25 años.
+                    </p>
+                    
+                    <!-- Metadata card -->
+                    <div class="p-6 bg-crema brutal-border brutal-shadow rounded-xl max-w-lg grid grid-cols-2 gap-4">
+                        <div>
+                            <span class="text-xs uppercase text-vinotinto font-bold tracking-wider">Estudiante</span>
+                            <p class="text-sm md:text-base font-semibold text-vinotinto-dark font-display">Peña Urquiola Estefani Andreina</p>
+                        </div>
+                        <div>
+                            <span class="text-xs uppercase text-vinotinto font-bold tracking-wider">Curso</span>
+                            <p class="text-sm md:text-base font-semibold text-vinotinto-dark font-display">1102 J. M.</p>
+                        </div>
+                        <div class="col-span-2 pt-2 border-t border-vinotinto/20">
+                            <span class="text-xs uppercase text-vinotinto font-bold tracking-wider">Documento de Referencia</span>
+                            <p class="text-xs md:text-sm font-medium text-softgray italic">Proyecto_plan_financiero_ordenado_actualizado.docx</p>
+                        </div>
+                    </div>
+                    
+                    <div class="flex flex-wrap gap-4 pt-2">
+                        <a href="#proyecto-vida" class="bg-vinotinto hover:bg-vinotinto-dark text-crema-light font-bold px-6 py-3 rounded-lg brutal-shadow transition-all font-display text-sm uppercase tracking-wider">
+                            Explorar Proyecto
+                        </a>
+                        <a href="#evidencias" class="bg-transparent border-2 border-vinotinto hover:bg-crema text-vinotinto-dark font-bold px-6 py-3 rounded-lg transition-all font-display text-sm uppercase tracking-wider">
+                            Ver Chats con IA
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Graphic/Avatar Area -->
+                <div class="lg:col-span-5 flex justify-center">
+                    <div class="relative group">
+                        <div class="absolute inset-0 bg-vinotinto/10 rounded-2xl transform translate-x-4 translate-y-4 brutal-border group-hover:translate-x-2 group-hover:translate-y-2 transition-transform duration-300"></div>
+                        <div class="relative bg-crema p-8 rounded-2xl brutal-border w-80 sm:w-96 text-center space-y-6">
+                            <!-- Custom SVG Avatar -->
+                            <div class="w-32 h-32 mx-auto bg-gradient-to-br from-crema-dark to-crema rounded-full flex items-center justify-center border-2 border-vinotinto overflow-hidden">
+                                <svg class="w-24 h-24 text-vinotinto" viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <circle cx="50" cy="40" r="22" fill="currentColor" opacity="0.85"/>
+                                    <path d="M15 85C15 65.67 30.67 55 50 55C69.33 55 85 65.67 85 85" fill="currentColor"/>
+                                </svg>
+                            </div>
+                            <div class="space-y-2">
+                                <h3 class="font-display font-bold text-xl text-vinotinto-dark">Estefani Peña</h3>
+                                <p class="text-xs text-vinotinto font-mono font-semibold uppercase tracking-widest">Estudiante Grado 11</p>
+                            </div>
+                            <div class="pt-4 border-t border-vinotinto/20 grid grid-cols-3 gap-2 text-center text-xs">
+                                <div>
+                                    <span class="block text-lg font-bold text-vinotinto-dark">25</span>
+                                    <span class="text-[10px] text-softgray uppercase">Edad Meta</span>
+                                </div>
+                                <div class="border-x border-vinotinto/20">
+                                    <span class="block text-lg font-bold text-vinotinto-dark">100%</span>
+                                    <span class="text-[10px] text-softgray uppercase">Viable</span>
+                                </div>
+                                <div>
+                                    <span class="block text-lg font-bold text-vinotinto-dark">Bogotá</span>
+                                    <span class="text-[10px] text-softgray uppercase">Ciudad</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <hr class="border-t border-vinotinto/20">
+
+        <!-- 2. MI PROYECTO DE VIDA ANTES DE MORIRME -->
+        <section id="proyecto-vida" class="py-12 scroll-mt-24">
+            <div class="text-center max-w-3xl mx-auto space-y-4 mb-16">
+                <span class="text-vinotinto font-mono font-semibold uppercase tracking-widest text-sm">Fase 1: El Diagnóstico</span>
+                <h2 class="text-3xl sm:text-4xl font-display font-black tracking-tight text-vinotinto-dark">Mi proyecto de vida antes de morirme</h2>
+                <p class="text-softgray text-sm sm:text-base">
+                    Definiendo el verdadero significado de "vivir con libertad y plenitud" bajo mis propios términos a los 25 años de edad.
+                </p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8 items-stretch">
+                <!-- Visión General -->
+                <div class="bg-crema p-8 rounded-xl brutal-border brutal-shadow flex flex-col justify-between space-y-6">
+                    <div class="space-y-4">
+                        <div class="flex items-center gap-3">
+                            <span class="p-2 bg-vinotinto/10 rounded text-vinotinto">
+                                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253"></path></svg>
+                            </span>
+                            <h3 class="font-display font-bold text-2xl text-vinotinto-dark">Filosofía del estilo de vida</h3>
+                        </div>
+                        <p class="text-softgray leading-relaxed text-sm md:text-base">
+                            Mi objetivo principal no está basado en la acumulación de lujos exagerados o apariencias materiales extravagantes, priorizo la <strong class="text-vinotinto-dark">tranquilidad, la libertad y las experiencias genuinas</strong> y me imagino viviendo de forma estable, segura e independiente.
+                        </p>
+                        <p class="text-softgray leading-relaxed text-sm md:text-base">
+                            Quiero tener el control sobre mi tiempo, residir de forma autónoma en mi propio espacio y disponer de la solvencia financiera para costear mis pasatiempos y conectarme profundamente con la naturaleza mediante viajes frecuentes.
+                        </p>
+                    </div>
+                    <div class="p-4 bg-crema-dark/50 border-l-4 border-vinotinto rounded-r-lg">
+                        <span class="block text-xs uppercase text-vinotinto font-bold mb-1">Lo que más me llamó la atención</span>
+                        <p class="text-xs text-softgray italic">"Tu objetivo no es tener una vida llena de lujos, sino una vida estable, con libertad para disfrutar la naturaleza, viajar y vivir con tranquilidad."</p>
+                    </div>
+                </div>
+
+                <!-- Los Pilares de mi Visión a los 25 años -->
+                <div class="space-y-6">
+                    <h3 class="font-display font-bold text-xl text-vinotinto-dark flex items-center gap-2">
+                        <span class="w-2 h-2 bg-vinotinto rounded-full"></span>
+                        Ejes fundamentales del día a día
+                    </h3>
+
+                    <!-- Pilar 1 -->
+                    <div class="flex gap-4 p-4 bg-crema/60 rounded-lg border border-vinotinto/15 hover:border-vinotinto/40 transition-colors">
+                        <div class="text-2xl mt-1">🏠</div>
+                        <div>
+                            <h4 class="font-bold text-vinotinto-dark text-base">Vivienda Independiente</h4>
+                            <p class="text-xs sm:text-sm text-softgray">Vivir sola en un apartamento pequeño e independiente ubicado en el sur de Bogotá, estrato 3 o 4, priorizando seguridad y autonomía.</p>
+                        </div>
+                    </div>
+
+                    <!-- Pilar 2 -->
+                    <div class="flex gap-4 p-4 bg-crema/60 rounded-lg border border-vinotinto/15 hover:border-vinotinto/40 transition-colors">
+                        <div class="text-2xl mt-1">🚲</div>
+                        <div>
+                            <h4 class="font-bold text-vinotinto-dark text-base">Movilidad Sostenible</h4>
+                            <p class="text-xs sm:text-sm text-softgray">Uso primordial de la bicicleta como medio de transporte ecológico y saludable, complementado ocasionalmente con transporte público.</p>
+                        </div>
+                    </div>
+
+                    <!-- Pilar 3 -->
+                    <div class="flex gap-4 p-4 bg-crema/60 rounded-lg border border-vinotinto/15 hover:border-vinotinto/40 transition-colors">
+                        <div class="text-2xl mt-1">🌿</div>
+                        <div>
+                            <h4 class="font-bold text-vinotinto-dark text-base">Pasatiempos y Naturaleza</h4>
+                            <p class="text-xs sm:text-sm text-softgray">Salidas periódicas a entornos naturales, manualidades con materiales reciclados, probar nuevas recetas culinarias en casa y escuchar música de forma gratuita.</p>
+                        </div>
+                    </div>
+
+                    <!-- Pilar 4 -->
+                    <div class="flex gap-4 p-4 bg-crema/60 rounded-lg border border-vinotinto/15 hover:border-vinotinto/40 transition-colors">
+                        <div class="text-2xl mt-1">✈️</div>
+                        <div>
+                            <h4 class="font-bold text-vinotinto-dark text-base">Ahorro con Propósito</h4>
+                            <p class="text-xs sm:text-sm text-softgray">Planificar fondos específicos desde joven para explorar los pintorescos pueblos de Colombia e iniciar un ahorro sistemático para realizar un gran viaje a Japón.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <hr class="border-t border-vinotinto/20">
+
+        <!-- 3. COSTO DE MI ESTILO DE VIDA -->
+        <section id="costo-vida" class="py-12 scroll-mt-24">
+            <div class="text-center max-w-3xl mx-auto space-y-4 mb-16">
+                <span class="text-vinotinto font-mono font-semibold uppercase tracking-widest text-sm">Fase 2: Investigación de Costos Reales</span>
+                <h2 class="text-3xl sm:text-4xl font-display font-black tracking-tight text-vinotinto-dark">Costo de mi estilo de vida</h2>
+                <p class="text-softgray text-sm sm:text-base">
+                    Investigación meticulosa de los costos actuales reales en Bogotá, adaptada a mis preferencias y calculada junto a la inteligencia artificial.
+                </p>
+            </div>
+
+            <!-- Table of Costs -->
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-start">
+                
+                <!-- Tabla del Presupuesto -->
+                <div class="lg:col-span-8 space-y-6">
+                    <div class="bg-crema brutal-border brutal-shadow rounded-xl overflow-hidden">
+                        <div class="bg-vinotinto text-crema-light p-4 font-display font-bold text-lg flex justify-between items-center">
+                            <span>Desglose de Presupuesto Mensual</span>
+                            <span class="text-xs font-mono bg-vinotinto-dark px-2.5 py-1 rounded">Bogotá, Colombia</span>
+                        </div>
+                        <div class="overflow-x-auto">
+                            <table class="w-full text-left border-collapse">
+                                <thead>
+                                    <tr class="border-b-2 border-vinotinto bg-crema-dark/40 text-vinotinto-dark font-mono text-xs">
+                                        <th class="p-4 uppercase">Categoría</th>
+                                        <th class="p-4 uppercase">Detalle y Concepto</th>
+                                        <th class="p-4 uppercase text-right">Rango Estimado (COP)</th>
+                                    </tr>
+                                </thead>
+                                <tbody class="divide-y divide-vinotinto/15 text-sm">
+                                    <tr class="hover:bg-crema-dark/20 transition-colors">
+                                        <td class="p-4 font-bold text-vinotinto-dark flex items-center gap-2"><span>🏠</span> Vivienda</td>
+                                        <td class="p-4 text-softgray">Arriendo de apartamento independiente en el sur de Bogotá + servicios públicos de estrato 3 o 4</td>
+                                        <td class="p-4 text-right font-mono font-semibold text-vinotinto-dark">$1.380.000</td>
+                                    </tr>
+                                    <tr class="hover:bg-crema-dark/20 transition-colors">
+                                        <td class="p-4 font-bold text-vinotinto-dark flex items-center gap-2"><span>🍽️</span> Alimentación</td>
+                                        <td class="p-4 text-softgray">Mercado en casa (cocinando) + comer fuera una vez por semana</td>
+                                        <td class="p-4 text-right font-mono font-semibold text-vinotinto-dark">$600.000 - $850.000</td>
+                                    </tr>
+                                    <tr class="hover:bg-crema-dark/20 transition-colors">
+                                        <td class="p-4 font-bold text-vinotinto-dark flex items-center gap-2"><span>🚲</span> Transporte</td>
+                                        <td class="p-4 text-softgray">Mantenimiento de bicicleta + pasajes ocasionales de TransMilenio</td>
+                                        <td class="p-4 text-right font-mono font-semibold text-vinotinto-dark">$70.000 - $160.000</td>
+                                    </tr>
+                                    <tr class="hover:bg-crema-dark/20 transition-colors">
+                                        <td class="p-4 font-bold text-vinotinto-dark flex items-center gap-2"><span>🎨</span> Entretenimiento</td>
+                                        <td class="p-4 text-softgray">Preparación de recetas, manualidades y salidas al aire libre / parques</td>
+                                        <td class="p-4 text-right font-mono font-semibold text-vinotinto-dark">$200.000 - $450.000</td>
+                                    </tr>
+                                    <tr class="hover:bg-crema-dark/20 transition-colors">
+                                        <td class="p-4 font-bold text-vinotinto-dark flex items-center gap-2"><span>🧴</span> Aseo y Personales</td>
+                                        <td class="p-4 text-softgray">Elementos de aseo personal, salud básica, imprevistos cotidianos</td>
+                                        <td class="p-4 text-right font-mono font-semibold text-vinotinto-dark">$250.000 - $350.000</td>
+                                    </tr>
+                                    <tr class="hover:bg-crema-dark/20 transition-colors">
+                                        <td class="p-4 font-bold text-vinotinto-dark flex items-center gap-2"><span>💰</span> Ahorro y Metas</td>
+                                        <td class="p-4 text-softgray">Destinado a fondo de viajes (Japón/Colombia) y emergencias futuras</td>
+                                        <td class="p-4 text-right font-mono font-semibold text-vinotinto-dark">$700.000 - $1.000.000</td>
+                                    </tr>
+                                    <!-- Total Row -->
+                                    <tr class="bg-crema-dark/45 font-bold border-t-2 border-vinotinto">
+                                        <td class="p-4 text-vinotinto-dark text-base" colspan="2">Presupuesto Mensual Recomendado</td>
+                                        <td class="p-4 text-right font-mono text-vinotinto-dark text-base">$3.200.000 - $4.200.000</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Justificación de Gastos -->
+                <div class="lg:col-span-4 space-y-6">
+                    <div class="bg-crema p-6 rounded-xl border border-vinotinto/20">
+                        <h3 class="font-display font-bold text-lg text-vinotinto-dark mb-4 flex items-center gap-2">
+                            <span>📝</span> Explicación de Gastos Clave
+                        </h3>
+                        
+                        <div class="space-y-4 text-xs md:text-sm">
+                            <div class="border-b border-vinotinto/15 pb-3">
+                                <h4 class="font-semibold text-vinotinto-dark">Vivienda segura en Bogotá</h4>
+                                <p class="text-softgray mt-1">El alquiler es el rubro prioritario, un apartamento de estrato 3 o 4 ofrece la seguridad y el espacio ideal para vivir sola con autonomía.</p>
+                            </div>
+                            <div class="border-b border-vinotinto/15 pb-3">
+                                <h4 class="font-semibold text-vinotinto-dark">Alimentación Inteligente</h4>
+                                <p class="text-softgray mt-1">Cocinar en casa el 90% de las veces reduce el gasto de comida de manera exponencial, permitiendo alimentos frescos por un costo moderado.</p>
+                            </div>
+                            <div>
+                                <h4 class="font-semibold text-vinotinto-dark">Ahorro Obligatorio (20%+)</h4>
+                                <p class="text-softgray mt-1">No es dinero sobrante; es un gasto fijo programado para financiar el sueño de viajar a Japón y recorrer los pueblos de Colombia.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="p-5 bg-vinotinto/10 border-2 border-vinotinto/20 rounded-xl">
+                        <h4 class="text-sm font-bold text-vinotinto-dark flex items-center gap-2">
+                            <span class="animate-pulse">📌</span> Tip de Planificación
+                        </h4>
+                        <p class="text-xs text-softgray mt-2">
+                            Ajustar los porcentajes reales te permite ver cómo cambia tu vida según tus ingresos reales, dándote más libertad para viajar.
+                        </p>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+        <hr class="border-t border-vinotinto/20">
+
+        <!-- 4. ¿CUÁNTO NECESITO GANAR? -->
+        <section id="ingreso-requerido" class="py-12 scroll-mt-24">
+            <div class="text-center max-w-3xl mx-auto space-y-4 mb-16">
+                <span class="text-vinotinto font-mono font-semibold uppercase tracking-widest text-sm">Fase 3: La Cifra Central</span>
+                <h2 class="text-3xl sm:text-4xl font-display font-black tracking-tight text-vinotinto-dark">La Cifra Central: Mi Meta Salarial</h2>
+                <p class="text-softgray text-sm sm:text-base">
+                    Organización del presupuesto bajo la regla ideal 50/30/20, junto con el 10% para la previsión de inflación e imprevistos.
+                </p>
+            </div>
+
+            <!-- Big Number Callout -->
+            <div class="bg-crema brutal-border brutal-shadow rounded-2xl p-8 text-center space-y-6 max-w-4xl mx-auto relative overflow-hidden">
+                <div class="absolute -top-12 -left-12 w-32 h-32 bg-vinotinto/5 rounded-full blur-2xl"></div>
+                
+                <h3 class="font-display font-bold text-lg sm:text-xl text-softgray uppercase tracking-widest">Ingreso mensual neto requerido</h3>
+                
+                <!-- The Big Number -->
+                <div class="py-4">
+                    <span class="block text-4xl sm:text-5xl md:text-7xl font-display font-black text-vinotinto-dark tracking-tight select-all">
+                        $4.422.000 COP
+                    </span>
+                    <span class="text-xs md:text-sm text-vinotinto font-mono font-bold uppercase tracking-wider block mt-2">
+                        Ingreso neto mensual, incluye 10% de inflación e imprevistos
+                    </span>
+                </div>
+
+                <div class="max-w-2xl mx-auto">
+                    <p class="text-sm md:text-base text-softgray leading-relaxed">
+                        Este valor ha sido calculado para mantener el estilo de vida propuesto a mis 25 años, representa el equilibrio entre cubrir mis <strong class="text-vinotinto-dark">necesidades básicas (50%)</strong>, dar espacio a mis <strong class="text-vinotinto-dark">deseos (30%)</strong> y asegurar mi <strong class="text-vinotinto-dark">ahorro y futuro (20%)</strong>.
+                    </p>
+                </div>
+
+                <!-- 50/30/20 Breakdown Bars -->
+                <div class="pt-6 grid grid-cols-1 md:grid-cols-3 gap-6 text-left">
+                    <div class="p-4 bg-crema-light rounded-lg border-l-4 border-vinotinto">
+                        <span class="text-xs font-mono text-vinotinto font-bold">50% - Necesidades</span>
+                        <p class="text-lg font-bold text-vinotinto-dark mt-1">$2.550.000</p>
+                        <p class="text-[11px] text-softgray mt-1">Arriendo, alimentación en casa, servicios, aseo personal, pasajes.</p>
+                    </div>
+                    <div class="p-4 bg-crema-light rounded-lg border-l-4 border-vinotinto-light">
+                        <span class="text-xs font-mono text-vinotinto-light font-bold">30% - Deseos</span>
+                        <p class="text-lg font-bold text-vinotinto-dark mt-1">$450.000</p>
+                        <p class="text-[11px] text-softgray mt-1">Salidas recreativas a parques, ingredientes de repostería, pasatiempos.</p>
+                    </div>
+                    <div class="p-4 bg-crema-light rounded-lg border-l-4 border-crema-accent">
+                        <span class="text-xs font-mono text-softgray font-bold">20% - Ahorro</span>
+                        <p class="text-lg font-bold text-vinotinto-dark mt-1">$1.020.000</p>
+                        <p class="text-[11px] text-softgray mt-1">Fondo estructurado de viajes (Japón, pueblos colombianos) y emergencias.</p>
+                    </div>
+                </div>
+
+                <!-- Interactive Budget Customizer Sandbox -->
+                <div class="mt-8 pt-8 border-t border-vinotinto/20 text-left">
+                    <h4 class="font-display font-bold text-base text-vinotinto-dark mb-4 flex items-center gap-2">
+                        <span>🧮</span> Simulador de Regla 50/30/20 Personalizable
+                    </h4>
+                    <p class="text-xs text-softgray mb-6">
+                        Ajusta el salario neto proyectado para ver en tiempo real cómo se debe estructurar tu presupuesto utilizando la regla financiera ideal.
+                    </p>
+
+                    <div class="grid grid-cols-1 md:grid-cols-12 gap-6 items-center">
+                        <div class="md:col-span-5 space-y-2">
+                            <label for="salarySlider" class="text-xs font-bold text-vinotinto-dark uppercase tracking-wide flex justify-between">
+                                <span>Salario Proyectado:</span>
+                                <span id="salaryVal" class="text-vinotinto text-sm font-mono font-bold">$4.422.000 COP</span>
+                            </label>
+                            <input type="range" id="salarySlider" min="2000000" max="10000000" step="100000" value="4422000" class="w-full accent-vinotinto bg-crema-dark h-2 rounded-lg cursor-pointer">
+                            <span class="text-[10px] text-softgray block">Mueve el control para cambiar los ingresos.</span>
+                        </div>
+
+                        <!-- Real-time results calculated via JavaScript -->
+                        <div class="md:col-span-7 grid grid-cols-3 gap-3 text-center">
+                            <div class="p-3 bg-crema-light rounded border border-vinotinto/30">
+                                <span class="text-[10px] text-softgray uppercase block">Necesidades (50%)</span>
+                                <span id="calcNec" class="text-sm font-mono font-bold text-vinotinto-dark">$2.211.000</span>
+                            </div>
+                            <div class="p-3 bg-crema-light rounded border border-vinotinto/30">
+                                <span class="text-[10px] text-softgray uppercase block">Deseos (30%)</span>
+                                <span id="calcDes" class="text-sm font-mono font-bold text-vinotinto-dark">$1.326.600</span>
+                            </div>
+                            <div class="p-3 bg-crema-light rounded border border-vinotinto/30">
+                                <span class="text-[10px] text-softgray uppercase block">Ahorro (20%)</span>
+                                <span id="calcAho" class="text-sm font-mono font-bold text-vinotinto-dark">$884.400</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <hr class="border-t border-vinotinto/20">
+
+        <!-- 5. MI RUTA PROFESIONAL -->
+        <section id="ruta-profesional" class="py-12 scroll-mt-24">
+            <div class="text-center max-w-3xl mx-auto space-y-4 mb-16">
+                <span class="text-vinotinto font-mono font-semibold uppercase tracking-widest text-sm">Fase 4: Educación y Trabajo</span>
+                <h2 class="text-3xl sm:text-4xl font-display font-black tracking-tight text-vinotinto-dark">Mi Ruta de Empleo y Educación</h2>
+                <p class="text-softgray text-sm sm:text-base">
+                    Cómo alcanzar los ingresos requeridos a través del desarrollo de carreras con alta demanda y especializaciones estratégicas.
+                </p>
+            </div>
+
+            <div class="grid grid-cols-1 lg:grid-cols-3 gap-8">
+                
+                <!-- Carrera Principal: Medicina en Trauma -->
+                <div class="lg:col-span-2 bg-crema p-8 rounded-xl brutal-border brutal-shadow flex flex-col justify-between space-y-6">
+                    <div class="space-y-4">
+                        <div class="flex items-center gap-3">
+                            <span class="p-2.5 bg-vinotinto/10 text-vinotinto rounded-lg border border-vinotinto/20 text-xl">🩺</span>
+                            <div>
+                                <h3 class="font-display font-bold text-2xl text-vinotinto-dark">Medicina (Enfoque en Sala de Trauma)</h3>
+                                <span class="text-xs text-vinotinto font-mono font-semibold">Mi Opción Aspiracional Principal</span>
+                            </div>
+                        </div>
+                        
+                        <p class="text-softgray text-sm md:text-base leading-relaxed">
+                            La medicina de trauma representa un área de altísima intensidad, crucial en el sistema de salud para salvar vidas en situaciones críticas de emergencia; he seleccionado esta opción por mi profundo interés de servicio y capacidad para trabajar bajo presión.
+                        </p>
+
+                        <!-- Salary specs -->
+                        <div class="p-4 bg-crema-light rounded-lg grid grid-cols-2 gap-4 border border-vinotinto/20">
+                            <div>
+                                <span class="text-[10px] text-softgray uppercase block">Salario Inicial Promedio</span>
+                                <span class="text-base sm:text-lg font-mono font-bold text-vinotinto-dark">$4.000.000 - $6.500.000</span>
+                            </div>
+                            <div>
+                                <span class="text-[10px] text-softgray uppercase block">Salario Especialista</span>
+                                <span class="text-base sm:text-lg font-mono font-bold text-vinotinto">$8.000.000 - $15.000.000+</span>
+                            </div>
+                        </div>
+
+                        <div class="space-y-2">
+                            <h4 class="font-bold text-vinotinto-dark text-sm">¿Por qué se ajusta a mi proyecto?</h4>
+                            <p class="text-xs sm:text-sm text-softgray">
+                                Supera cómodamente mi presupuesto inicial ideal ($4.422.000), garantizando estabilidad económica a largo plazo y permitiendo un ahorro acelerado para mis proyectos personales (como viajar a Japón), a la vez que realizo una labor humanitaria fundamental.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Comparativa de Opciones de Salud -->
+                <div class="space-y-6">
+                    <h3 class="font-display font-bold text-xl text-vinotinto-dark">Caminos Alternos y Complementarios</h3>
+                    
+                    <!-- Opción 2: Enfermería Profesional -->
+                    <div class="p-5 bg-crema rounded-xl border border-vinotinto/20 space-y-3">
+                        <div class="flex items-center justify-between">
+                            <h4 class="font-bold text-vinotinto-dark text-base">Enfermería Profesional</h4>
+                            <span class="text-xs font-mono px-2 py-0.5 bg-vinotinto-light text-crema-light rounded">4-5 Años</span>
+                        </div>
+                        <p class="text-xs text-softgray">Excelente demanda en unidades de cuidado crítico y urgencias médicas.</p>
+                        <div class="flex justify-between items-center text-xs">
+                            <span class="text-softgray">Rango de entrada:</span>
+                            <span class="font-mono font-bold text-vinotinto-dark">$2.800.000 - $4.500.000</span>
+                        </div>
+                    </div>
+
+                    <!-- Opción 3: Atención Prehospitalaria -->
+                    <div class="p-5 bg-crema rounded-xl border border-vinotinto/20 space-y-3">
+                        <div class="flex items-center justify-between">
+                            <h4 class="font-bold text-vinotinto-dark text-base">Atención Prehospitalaria</h4>
+                            <span class="text-xs font-mono px-2 py-0.5 bg-vinotinto-light text-crema-light rounded">2-3 Años</span>
+                        </div>
+                        <p class="text-xs text-softgray">Carrera tecnológica perfecta para integrarse directamente al servicio de ambulancias y trauma.</p>
+                        <div class="flex justify-between items-center text-xs">
+                            <span class="text-softgray">Rango de entrada:</span>
+                            <span class="font-mono font-bold text-vinotinto-dark">$2.000.000 - $3.800.000</span>
+                        </div>
+                    </div>
+
+                    <!-- Digital Skills Complement -->
+                    <div class="p-4 bg-crema-dark/50 border border-vinotinto/20 rounded-xl">
+                        <span class="text-xs font-bold text-vinotinto-dark block uppercase tracking-wider">Habilidades Digitales Clave</span>
+                        <p class="text-[11px] text-softgray mt-1">Para complementar mi formación: Inglés B2-C1 (indispensable para Japón), Excel avanzado, y manejo de software médico.</p>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+        <hr class="border-t border-vinotinto/20">
+
+        <!-- 6. FORMACIÓN DESDE HOY -->
+        <section id="formacion" class="py-12 scroll-mt-24">
+            <div class="text-center max-w-3xl mx-auto space-y-4 mb-16">
+                <span class="text-vinotinto font-mono font-semibold uppercase tracking-widest text-sm">Fase 4 (Ruta Práctica): Formación Temprana</span>
+                <h2 class="text-3xl sm:text-4xl font-display font-black tracking-tight text-vinotinto-dark">Formación Práctica Desde Hoy</h2>
+                <p class="text-softgray text-sm sm:text-base">
+                    Plan de acción inmediato para capacitarme de forma gratuita y ganar experiencia antes de terminar la educación secundaria.
+                </p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                
+                <!-- Tarjeta 1: Cruz Roja -->
+                <div class="bg-crema p-6 rounded-xl border border-vinotinto/20 flex flex-col justify-between">
+                    <div class="space-y-4">
+                        <span class="text-2xl">🚑</span>
+                        <h3 class="font-display font-bold text-lg text-vinotinto-dark">Cruz Roja Colombiana</h3>
+                        <p class="text-xs sm:text-sm text-softgray leading-relaxed">
+                            Involucrarme activamente en el Voluntariado Juvenil de Primeros Respondientes, una gran forma de obtener experiencia invaluable de campo en emergencias y servicios de trauma real.
+                        </p>
+                    </div>
+                    <ul class="text-xs text-vinotinto-dark mt-4 space-y-1.5 border-t border-vinotinto/20 pt-4">
+                        <li>✓ Primeros auxilios básicos</li>
+                        <li>✓ Gestión del riesgo</li>
+                        <li>✓ Trabajo comunitario</li>
+                    </ul>
+                </div>
+
+                <!-- Tarjeta 2: Cursos SENA -->
+                <div class="bg-crema p-6 rounded-xl border border-vinotinto/20 flex flex-col justify-between">
+                    <div class="space-y-4">
+                        <span class="text-2xl">📚</span>
+                        <h3 class="font-display font-bold text-lg text-vinotinto-dark">Servicio Nacional de Aprendizaje (SENA)</h3>
+                        <p class="text-xs sm:text-sm text-softgray leading-relaxed">
+                            Cursos virtuales y gratuitos con certificación oficial que puedo completar en mis tiempos libres desde el colegio.
+                        </p>
+                    </div>
+                    <ul class="text-xs text-vinotinto-dark mt-4 space-y-1.5 border-t border-vinotinto/20 pt-4">
+                        <li>✓ Atención Integral al Usuario en Salud</li>
+                        <li>✓ Primeros Auxilios Avanzados</li>
+                        <li>✓ Humanización de los Servicios Médicos</li>
+                    </ul>
+                </div>
+
+                <!-- Tarjeta 3: Habilidades Transversales -->
+                <div class="bg-crema p-6 rounded-xl border border-vinotinto/20 flex flex-col justify-between">
+                    <div class="space-y-4">
+                        <span class="text-2xl">🌍</span>
+                        <h3 class="font-display font-bold text-lg text-vinotinto-dark">Habilidades del Siglo XXI</h3>
+                        <p class="text-xs sm:text-sm text-softgray leading-relaxed">
+                            Aprovechar plataformas virtuales con becas (como Coursera o Platzi) para aprender herramientas técnicas globales.
+                        </p>
+                    </div>
+                    <ul class="text-xs text-vinotinto-dark mt-4 space-y-1.5 border-t border-vinotinto/20 pt-4">
+                        <li>✓ Inglés B2 (Duolingo / Platzi)</li>
+                        <li>✓ Excel profesional y bases de datos</li>
+                        <li>✓ Salud y seguridad en el trabajo</li>
+                    </ul>
+                </div>
+
+            </div>
+
+            <!-- Plan de Acción Línea de Tiempo -->
+            <div class="mt-12 p-8 bg-crema brutal-border rounded-xl">
+                <h3 class="font-display font-bold text-xl text-vinotinto-dark mb-6 flex items-center gap-2">
+                    <span>📅</span> Plan de Acción Estructurado (Mis Próximos Pasos)
+                </h3>
+                <div class="relative border-l-2 border-vinotinto ml-4 space-y-8">
+                    <!-- Step 1 -->
+                    <div class="relative pl-6">
+                        <div class="absolute -left-[9px] top-1.5 w-4 h-4 rounded-full bg-crema border-2 border-vinotinto"></div>
+                        <span class="text-xs font-mono text-vinotinto font-bold">FASE ACTUAL (Grado 11)</span>
+                        <h4 class="font-bold text-vinotinto-dark text-sm sm:text-base">Culminar Colegio e Iniciar Cursos Cortos</h4>
+                        <p class="text-xs sm:text-sm text-softgray">Terminar grado 11 con excelente rendimiento, iniciar cursos virtuales cortos en el SENA y buscar la vinculación directa a voluntariados como el de la Cruz Roja.</p>
+                    </div>
+                    <!-- Step 2 -->
+                    <div class="relative pl-6">
+                        <div class="absolute -left-[9px] top-1.5 w-4 h-4 rounded-full bg-vinotinto border-2 border-crema-dark"></div>
+                        <span class="text-xs font-mono text-vinotinto font-bold">18 A 20 AÑOS</span>
+                        <h4 class="font-bold text-vinotinto-dark text-sm sm:text-base">Acceso Universitario y Experiencia Previa</h4>
+                        <p class="text-xs sm:text-sm text-softgray">Presentar las pruebas correspondientes de acceso a Medicina o iniciar el tecnólogo en Atención Prehospitalaria, mantener activa la práctica de primeros auxilios y perfeccionar el inglés.</p>
+                    </div>
+                    <!-- Step 3 -->
+                    <div class="relative pl-6">
+                        <div class="absolute -left-[9px] top-1.5 w-4 h-4 rounded-full bg-vinotinto border-2 border-vinotinto-light"></div>
+                        <span class="text-xs font-mono text-vinotinto font-bold">21 A 25 AÑOS</span>
+                        <h4 class="font-bold text-vinotinto-dark text-sm sm:text-base">Graduación, Empleo y Consolidación del Ahorro</h4>
+                        <p class="text-xs sm:text-sm text-softgray">Ingresar formalmente al mercado laboral de la salud, habilitar una cuenta de ahorro programado con el 20% del salario neto y planificar el soñado viaje a Japón.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <hr class="border-t border-vinotinto/20">
+
+        <!-- 7. EVIDENCIAS DE CONSULTAS A LA IA -->
+        <section id="evidencias" class="py-12 scroll-mt-24">
+            <div class="text-center max-w-3xl mx-auto space-y-4 mb-16">
+                <span class="text-vinotinto font-mono font-semibold uppercase tracking-widest text-sm">Evidencias del Proceso</span>
+                <h2 class="text-3xl sm:text-4xl font-display font-black tracking-tight text-vinotinto-dark">Consultas Realizadas a la IA</h2>
+                <p class="text-softgray text-sm sm:text-base">
+                    Evidencias interactivas que simulan paso a paso los chats y directrices generadas con la inteligencia artificial durante las diferentes fases del proyecto.
+                </p>
+            </div>
+
+            <!-- Interactive Chat Viewer -->
+            <div class="bg-crema brutal-border rounded-xl overflow-hidden max-w-4xl mx-auto">
+                <!-- Tab Headers -->
+                <div class="bg-crema-dark border-b border-vinotinto flex overflow-x-auto text-xs font-mono">
+                    <button data-tab="tab1" id="btn-tab1" class="tab-btn px-6 py-4 border-r border-vinotinto text-vinotinto-dark font-bold bg-crema-light focus:outline-none whitespace-nowrap">
+                        Fase 1: Diagnóstico
+                    </button>
+                    <button data-tab="tab2" id="btn-tab2" class="tab-btn px-6 py-4 border-r border-vinotinto text-softgray hover:text-vinotinto-dark focus:outline-none whitespace-nowrap">
+                        Fase 2: Costos Reales
+                    </button>
+                    <button data-tab="tab3" id="btn-tab3" class="tab-btn px-6 py-4 border-r border-vinotinto text-softgray hover:text-vinotinto-dark focus:outline-none whitespace-nowrap">
+                        Fase 3: Presupuesto 50/30/20
+                    </button>
+                    <button data-tab="tab4" id="btn-tab4" class="tab-btn px-6 py-4 text-softgray hover:text-vinotinto-dark focus:outline-none whitespace-nowrap">
+                        Fase 4: Plan de Ruta
+                    </button>
+                </div>
+
+                <!-- Tab Contents (Simulated AI Chats) -->
+                <div class="p-6 space-y-6 min-h-[400px]">
+                    
+                    <!-- Tab 1 CONTENT -->
+                    <div id="content-tab1" class="tab-content space-y-4">
+                        <div class="space-y-4">
+                            <!-- User message -->
+                            <div class="flex items-start gap-3 max-w-[85%]">
+                                <div class="bg-vinotinto text-crema-light rounded-lg p-3 text-xs sm:text-sm">
+                                    <p class="font-bold text-[10px] text-crema-dark uppercase mb-1">Peña Estefani (Tú)</p>
+                                    Tengo 16 años, estoy en grado 11 y vivo en Bogotá, quiero que actúes como un asesor financiero y me hagas 5 preguntas clave sobre cómo me imagino mi vida a los 25 años para calcular mi presupuesto ideal.
+                                </div>
+                            </div>
+                            <!-- AI response -->
+                            <div class="flex items-start gap-3 justify-end max-w-[85%] ml-auto">
+                                <div class="bg-crema-light border border-vinotinto/30 rounded-lg p-3 text-xs sm:text-sm text-textdark">
+                                    <p class="font-bold text-[10px] text-vinotinto uppercase mb-1">Inteligencia artificial (asesor)</p>
+                                    ¡Hola, Estefani! Qué gran iniciativa planificar esto desde tus 16 años, para ayudarte a diseñar tu presupuesto ideal para tus 25 años, por favor cuéntame: <br>
+                                    1. ¿Quieres vivir sola, con roomies o en pareja? <br>
+                                    2. ¿Cómo te transportarás principalmente? <br>
+                                    3. ¿Prefieres cocinar la mayor parte del tiempo o comer fuera? <br>
+                                    4. ¿Qué tipo de pasatiempos o salidas disfrutas? <br>
+                                    5. ¿Cuáles son tus metas de viajes a corto y largo plazo?
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Tab 2 CONTENT -->
+                    <div id="content-tab2" class="tab-content hidden space-y-4">
+                        <div class="space-y-4">
+                            <!-- User message -->
+                            <div class="flex items-start gap-3 max-w-[85%]">
+                                <div class="bg-vinotinto text-crema-light rounded-lg p-3 text-xs sm:text-sm">
+                                    <p class="font-bold text-[10px] text-crema-dark uppercase mb-1">Peña Estefani (Tú)</p>
+                                    Dame un estimado de cuánto cuesta hoy en día el arriendo de un apartamento independiente pequeño y los servicios públicos para una persona en una zona de estrato 3 o 4 en el sur de Bogotá.
+                                </div>
+                            </div>
+                            <!-- AI response -->
+                            <div class="flex items-start gap-3 justify-end max-w-[85%] ml-auto">
+                                <div class="bg-crema-light border border-vinotinto/30 rounded-lg p-3 text-xs sm:text-sm text-textdark text-left">
+                                    <p class="font-bold text-[10px] text-vinotinto uppercase mb-1">Inteligencia artificial</p>
+                                    Para el sur de Bogotá, en estratos 3 o 4, un apartamento pequeño e independiente cuesta entre <strong>$1.000.000 y $1.400.000 COP</strong> mensuales. <br><br>
+                                    Los servicios públicos (luz, agua, gas e internet) promedian entre <strong>$120.000 y $280.000 COP</strong> mensuales dependiendo del estrato exacto. <br><br>
+                                    Un presupuesto consolidado seguro de vivienda para ti sería de aproximadamente <strong>$1.380.000 COP/mes</strong>.
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Tab 3 CONTENT -->
+                    <div id="content-tab3" class="tab-content hidden space-y-4">
+                        <div class="space-y-4">
+                            <!-- User message -->
+                            <div class="flex items-start gap-3 max-w-[85%]">
+                                <div class="bg-vinotinto text-crema-light rounded-lg p-3 text-xs sm:text-sm">
+                                    <p class="font-bold text-[10px] text-crema-dark uppercase mb-1">Peña Estefani (Tú)</p>
+                                    Con los datos anteriores, crea una tabla de presupuesto mensual usando la regla 50/30/20, añade un 10% extra para inflación e imprevistos y dime el total neto que necesito ganar al mes.
+                                </div>
+                            </div>
+                            <!-- AI response -->
+                            <div class="flex items-start gap-3 justify-end max-w-[85%] ml-auto">
+                                <div class="bg-crema-light border border-vinotinto/30 rounded-lg p-3 text-xs sm:text-sm text-textdark">
+                                    <p class="font-bold text-[10px] text-vinotinto uppercase mb-1">Inteligencia artificial</p>
+                                    Claro, organizando tu estilo de vida bajo la regla 50/30/20:<br>
+                                    - <strong>Necesidades (50%):</strong> $2.550.000 COP (vivienda, comida, transporte y aseo)<br>
+                                    - <strong>Deseos (30%):</strong> $450.000 COP (salidas a la naturaleza, repostería)<br>
+                                    - <strong>Ahorro (20%):</strong> $1.020.000 COP (fondo de viaje a Japón)<br><br>
+                                    Subtotal: $4.020.000 COP + 10% de inflación e imprevistos ($402.000 COP). <br>
+                                    <strong>Total mensual requerido: $4.422.000 COP netos.</strong>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Tab 4 CONTENT -->
+                    <div id="content-tab4" class="tab-content hidden space-y-4">
+                        <div class="space-y-4">
+                            <!-- User message -->
+                            <div class="flex items-start gap-3 max-w-[85%]">
+                                <div class="bg-vinotinto text-crema-light rounded-lg p-3 text-xs sm:text-sm">
+                                    <p class="font-bold text-[10px] text-crema-dark uppercase mb-1">Peña Estefani (Tú)</p>
+                                    Quiero estudiar medicina enfocado en sala de trauma. ¿Esta carrera cubre mi presupuesto? Además recomiéndame cursos gratis para empezar desde ya siendo estudiante de colegio público.
+                                </div>
+                            </div>
+                            <!-- AI response -->
+                            <div class="flex items-start gap-3 justify-end max-w-[85%] ml-auto">
+                                <div class="bg-crema-light border border-vinotinto/30 rounded-lg p-3 text-xs sm:text-sm text-textdark">
+                                    <p class="font-bold text-[10px] text-vinotinto uppercase mb-1">Inteligencia artificial</p>
+                                    ¡Excelente elección! Un médico general de entrada en Colombia gana entre <strong>$4.000.000 y $6.500.000 COP</strong>, lo cual cubre perfectamente tu meta de $4.422.000, al especializarte en trauma tus ingresos pueden duplicarse.<br><br>
+                                    <strong>Ruta gratuita desde ya:</strong><br>
+                                    - <strong>SENA:</strong> Cursos virtuales de Primeros Auxilios y Humanización en Salud.<br>
+                                    - <strong>Cruz Roja:</strong> Regístrate como voluntario juvenil.<br>
+                                    - <strong>Inglés:</strong> Practica gratis para tu viaje a Japón.
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+                
+                <!-- Chat Footer Info -->
+                <div class="bg-crema-dark/50 p-4 border-t border-vinotinto text-center text-[11px] text-softgray">
+                    Evidencias simuladas de la conversación interactiva con modelos de lenguaje generativo, como ChatGPT o Claude, documentadas en Proyecto_plan_financiero_ordenado_actualizado.docx.
+                </div>
+            </div>
+        </section>
+
+        <hr class="border-t border-vinotinto/20">
+
+        <!-- 8. REFLEXIÓN FINAL -->
+        <section id="reflexion" class="py-12 scroll-mt-24">
+            <div class="text-center max-w-3xl mx-auto space-y-4 mb-16">
+                <span class="text-vinotinto font-mono font-semibold uppercase tracking-widest text-sm">Conclusión y Ética</span>
+                <h2 class="text-3xl sm:text-4xl font-display font-black tracking-tight text-vinotinto-dark">Reflexión Personal Final</h2>
+                <p class="text-softgray text-sm sm:text-base">
+                    Análisis argumentado sobre las finanzas personales, decisiones tempranas y el uso responsable de la inteligencia artificial.
+                </p>
+            </div>
+
+            <!-- Reflexiones Grid -->
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                
+                <!-- Pregunta 1 -->
+                <div class="bg-crema p-6 rounded-xl border border-vinotinto/20 space-y-3">
+                    <span class="text-xs font-mono font-bold text-vinotinto uppercase block">Pregunta 1</span>
+                    <h3 class="font-display font-bold text-base md:text-lg text-vinotinto-dark">¿El estilo de vida que deseo es económicamente viable?</h3>
+                    <p class="text-xs sm:text-sm text-softgray leading-relaxed">
+                        Sí, considero que mi estilo de vida deseado es totalmente viable, esto se debe a que no priorizo lujos ostentosos o superficiales, sino una vida tranquila centrada en experiencias en la naturaleza, pasatiempos caseros económicos y un arriendo en un sector modesto pero seguro; al calcular minuciosamente cada gasto, veo que con una correcta planeación profesional es una meta alcanzable.
+                    </p>
+                </div>
+
+                <!-- Pregunta 2 -->
+                <div class="bg-crema p-6 rounded-xl border border-vinotinto/20 space-y-3">
+                    <span class="text-xs font-mono font-bold text-vinotinto uppercase block">Pregunta 2</span>
+                    <h3 class="font-display font-bold text-base md:text-lg text-vinotinto-dark">¿Qué decisiones debo tomar desde ahora para lograr mis metas?</h3>
+                    <p class="text-xs sm:text-sm text-softgray leading-relaxed">
+                        Debo comprometerme profundamente con terminar mi grado 11 con honores y buscar opciones de ingreso a la educación superior en salud, paralelamente, mi decisión clave es empezar a formarme de manera gratuita en primeros auxilios con el SENA y sumarme a programas de voluntariado de la Cruz Roja, construyendo habilidades del mundo real y disciplina financiera desde mi adolescencia.
+                    </p>
+                </div>
+
+                <!-- Pregunta 3 -->
+                <div class="bg-crema p-6 rounded-xl border border-vinotinto/20 space-y-3">
+                    <span class="text-xs font-mono font-bold text-vinotinto uppercase block">Pregunta 3</span>
+                    <h3 class="font-display font-bold text-base md:text-lg text-vinotinto-dark">¿Qué aprendí sobre el manejo de las finanzas personales?</h3>
+                    <p class="text-xs sm:text-sm text-softgray leading-relaxed">
+                        He comprendido que unas finanzas sanas no surgen de la improvisación ni de esperar a ganar mucho dinero para empezar a administrarlo, el verdadero secreto financiero radica en estructurar presupuestos con reglas científicas como la 50/30/20 y tener el hábito inquebrantable del ahorro programado; organizar mis cuentas me da control absoluto y paz mental sobre mi futuro.
+                    </p>
+                </div>
+
+                <!-- Pregunta 4 -->
+                <div class="bg-crema p-6 rounded-xl border border-vinotinto/20 space-y-3">
+                    <span class="text-xs font-mono font-bold text-vinotinto uppercase block">Pregunta 4</span>
+                    <h3 class="font-display font-bold text-base md:text-lg text-vinotinto-dark">¿Cómo puede ayudarme la IA en la planificación de mi futuro?</h3>
+                    <p class="text-xs sm:text-sm text-softgray leading-relaxed">
+                        La IA se convirtió en una guía fantástica y una mentora financiera, me permitió ordenar mis deseos abstractos en tablas de datos organizadas, calcular variables complejas como la provisión por inflación y proyectar de manera rápida las mejores rutas de formación técnica y salarios de mi mercado local; es un acelerador del conocimiento que, usado de forma ética, potencia enormemente mis decisiones.
+                    </p>
+                </div>
+
+            </div>
+        </section>
+
+    </main>
+
+    <!-- FOOTER -->
+    <footer class="bg-crema border-t-2 border-vinotinto py-12 mt-24">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col md:flex-row justify-between items-center gap-6">
+            <div class="text-center md:text-left space-y-2">
+                <span class="font-display font-bold text-lg text-vinotinto-dark tracking-wider block">Proyecto de Finanzas Escolares</span>
+                <p class="text-xs text-softgray">Presentado para la asignatura de Ética y Valores / Economía</p>
+            </div>
+            <div class="text-center md:text-right text-xs text-softgray space-y-1">
+                <p>© 2026 Estefani Andreina Peña Urquiola. Todos los derechos reservados.</p>
+                <p>Diseño web minimalista y brutalista con acento crema y vinotinto suave.</p>
+            </div>
+        </div>
+    </footer>
+    <script src="assets/js/main.js"></script>
+</body>
+</html>
