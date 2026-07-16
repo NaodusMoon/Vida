@@ -1,23 +1,223 @@
-/* Brutalist borders and customized scrollbar using the soft vinotinto/crema palette */
-        .brutal-border {
-            border: 2px solid #832C35;
-        }
-        .brutal-shadow {
-            box-shadow: 4px 4px 0px 0px #832C35;
-        }
-        .brutal-shadow-dark {
-            box-shadow: 4px 4px 0px 0px #4E1218;
-        }
-        ::-webkit-scrollbar {
-            width: 8px;
-        }
-        ::-webkit-scrollbar-track {
-            background: #FDFBF7;
-        }
-        ::-webkit-scrollbar-thumb {
-            background: #832C35;
-            border-radius: 4px;
-        }
-        ::-webkit-scrollbar-thumb:hover {
-            background: #4E1218;
-        }
+/* Bordes brutalistas y barra de desplazamiento personalizada */
+.brutal-border {
+    border: 2px solid #832C35;
+}
+
+.brutal-shadow {
+    box-shadow: 4px 4px 0 0 #832C35;
+}
+
+.brutal-shadow-dark {
+    box-shadow: 4px 4px 0 0 #4E1218;
+}
+
+::-webkit-scrollbar {
+    width: 8px;
+}
+
+::-webkit-scrollbar-track {
+    background: #FDFBF7;
+}
+
+::-webkit-scrollbar-thumb {
+    background: #832C35;
+    border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: #4E1218;
+}
+
+.icon-badge {
+    display: inline-flex;
+    width: 2.5rem;
+    height: 2.5rem;
+    flex: 0 0 2.5rem;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid rgba(131, 44, 53, 0.25);
+    border-radius: 0.5rem;
+    background: rgba(131, 44, 53, 0.08);
+    color: #832C35;
+}
+
+.icon-badge svg,
+.table-icon,
+.check-item svg {
+    width: 1.1rem;
+    height: 1.1rem;
+    stroke-width: 2.2;
+}
+
+.table-icon {
+    color: #832C35;
+    flex: 0 0 auto;
+}
+
+.check-item {
+    display: flex;
+    align-items: center;
+    gap: 0.45rem;
+}
+
+.check-item svg {
+    color: #832C35;
+}
+
+.reveal {
+    opacity: 0;
+    transform: translateY(22px);
+    transition: opacity 650ms ease, transform 650ms ease;
+}
+
+.reveal.is-visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.motion-card {
+    transition: transform 220ms ease, box-shadow 220ms ease, border-color 220ms ease;
+}
+
+.motion-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 6px 6px 0 0 rgba(131, 44, 53, 0.32);
+    border-color: rgba(131, 44, 53, 0.6);
+}
+
+.evidence-carousel {
+    display: grid;
+    grid-template-columns: minmax(0, 0.9fr) minmax(280px, 1.1fr);
+    gap: 1.5rem;
+    align-items: stretch;
+}
+
+.evidence-frame {
+    min-height: 520px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    border: 2px solid #832C35;
+    border-radius: 0.75rem;
+    background: #2B1A1D;
+    box-shadow: 4px 4px 0 0 #832C35;
+}
+
+.evidence-frame img {
+    width: min(100%, 360px);
+    max-height: 560px;
+    object-fit: contain;
+    display: block;
+}
+
+.evidence-panel {
+    min-height: 520px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    gap: 1.25rem;
+    border: 1px solid rgba(131, 44, 53, 0.25);
+    border-radius: 0.75rem;
+    background: #FDFBF7;
+    padding: 1.5rem;
+}
+
+.evidence-kicker {
+    display: inline-flex;
+    width: fit-content;
+    align-items: center;
+    gap: 0.45rem;
+    border: 1px solid rgba(131, 44, 53, 0.28);
+    border-radius: 999px;
+    background: rgba(131, 44, 53, 0.08);
+    color: #832C35;
+    padding: 0.35rem 0.75rem;
+    font-size: 0.72rem;
+    font-weight: 800;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+}
+
+.evidence-question {
+    border-left: 4px solid #832C35;
+    background: rgba(244, 234, 225, 0.72);
+    padding: 1rem;
+    color: #5C5052;
+    font-size: 0.95rem;
+    line-height: 1.65;
+}
+
+.carousel-controls {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+    gap: 0.75rem;
+}
+
+.carousel-button {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.45rem;
+    border: 2px solid #832C35;
+    border-radius: 0.5rem;
+    background: #832C35;
+    color: #FDFBF7;
+    padding: 0.75rem 1rem;
+    font-size: 0.75rem;
+    font-weight: 800;
+    text-transform: uppercase;
+    transition: transform 180ms ease, background 180ms ease;
+}
+
+.carousel-button:hover {
+    background: #4E1218;
+    transform: translateY(-2px);
+}
+
+.carousel-counter {
+    color: #832C35;
+    font-family: "Space Grotesk", sans-serif;
+    font-weight: 800;
+}
+
+@keyframes float-soft {
+    0%, 100% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-10px);
+    }
+}
+
+.float-soft {
+    animation: float-soft 5s ease-in-out infinite;
+}
+
+@media (max-width: 900px) {
+    .evidence-carousel {
+        grid-template-columns: 1fr;
+    }
+
+    .evidence-frame,
+    .evidence-panel {
+        min-height: auto;
+    }
+
+    .evidence-frame img {
+        width: min(100%, 320px);
+        max-height: 520px;
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .reveal,
+    .motion-card,
+    .carousel-button,
+    .float-soft {
+        animation: none;
+        transition: none;
+    }
+}

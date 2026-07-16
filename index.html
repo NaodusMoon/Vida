@@ -6,6 +6,7 @@
     <title>¿Cuánto cuesta vivir como quiero vivir? - Estefani Peña</title>
     <!-- Tailwind CSS -->
     <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://unpkg.com/lucide@latest"></script>
     <!-- Fuentes -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -90,10 +91,6 @@
                         <div>
                             <span class="text-xs uppercase text-vinotinto font-bold tracking-wider">Curso</span>
                             <p class="text-sm md:text-base font-semibold text-vinotinto-dark font-display">1102 J. M.</p>
-                        </div>
-                        <div class="col-span-2 pt-2 border-t border-vinotinto/20">
-                            <span class="text-xs uppercase text-vinotinto font-bold tracking-wider">Documento de Referencia</span>
-                            <p class="text-xs md:text-sm font-medium text-softgray italic">Proyecto_plan_financiero_ordenado_actualizado.docx</p>
                         </div>
                     </div>
                     
@@ -187,7 +184,7 @@
 
                     <!-- Pilar 1 -->
                     <div class="flex gap-4 p-4 bg-crema/60 rounded-lg border border-vinotinto/15 hover:border-vinotinto/40 transition-colors">
-                        <div class="text-2xl mt-1">🏠</div>
+                        <div class="icon-badge mt-1"><i data-lucide="home"></i></div>
                         <div>
                             <h4 class="font-bold text-vinotinto-dark text-base">Vivienda Independiente</h4>
                             <p class="text-xs sm:text-sm text-softgray">Vivir sola en un apartamento pequeño e independiente ubicado en el sur de Bogotá, estrato 3 o 4, priorizando seguridad y autonomía.</p>
@@ -196,7 +193,7 @@
 
                     <!-- Pilar 2 -->
                     <div class="flex gap-4 p-4 bg-crema/60 rounded-lg border border-vinotinto/15 hover:border-vinotinto/40 transition-colors">
-                        <div class="text-2xl mt-1">🚲</div>
+                        <div class="icon-badge mt-1"><i data-lucide="bike"></i></div>
                         <div>
                             <h4 class="font-bold text-vinotinto-dark text-base">Movilidad Sostenible</h4>
                             <p class="text-xs sm:text-sm text-softgray">Uso primordial de la bicicleta como medio de transporte ecológico y saludable, complementado ocasionalmente con transporte público.</p>
@@ -205,7 +202,7 @@
 
                     <!-- Pilar 3 -->
                     <div class="flex gap-4 p-4 bg-crema/60 rounded-lg border border-vinotinto/15 hover:border-vinotinto/40 transition-colors">
-                        <div class="text-2xl mt-1">🌿</div>
+                        <div class="icon-badge mt-1"><i data-lucide="leaf"></i></div>
                         <div>
                             <h4 class="font-bold text-vinotinto-dark text-base">Pasatiempos y Naturaleza</h4>
                             <p class="text-xs sm:text-sm text-softgray">Salidas periódicas a entornos naturales, manualidades con materiales reciclados, probar nuevas recetas culinarias en casa y escuchar música de forma gratuita.</p>
@@ -214,7 +211,7 @@
 
                     <!-- Pilar 4 -->
                     <div class="flex gap-4 p-4 bg-crema/60 rounded-lg border border-vinotinto/15 hover:border-vinotinto/40 transition-colors">
-                        <div class="text-2xl mt-1">✈️</div>
+                        <div class="icon-badge mt-1"><i data-lucide="plane"></i></div>
                         <div>
                             <h4 class="font-bold text-vinotinto-dark text-base">Ahorro con Propósito</h4>
                             <p class="text-xs sm:text-sm text-softgray">Planificar fondos específicos desde joven para explorar los pintorescos pueblos de Colombia e iniciar un ahorro sistemático para realizar un gran viaje a Japón.</p>
@@ -257,32 +254,32 @@
                                 </thead>
                                 <tbody class="divide-y divide-vinotinto/15 text-sm">
                                     <tr class="hover:bg-crema-dark/20 transition-colors">
-                                        <td class="p-4 font-bold text-vinotinto-dark flex items-center gap-2"><span>🏠</span> Vivienda</td>
+                                        <td class="p-4 font-bold text-vinotinto-dark flex items-center gap-2"><i data-lucide="home" class="table-icon"></i> Vivienda</td>
                                         <td class="p-4 text-softgray">Arriendo de apartamento independiente en el sur de Bogotá + servicios públicos de estrato 3 o 4</td>
                                         <td class="p-4 text-right font-mono font-semibold text-vinotinto-dark">$1.380.000</td>
                                     </tr>
                                     <tr class="hover:bg-crema-dark/20 transition-colors">
-                                        <td class="p-4 font-bold text-vinotinto-dark flex items-center gap-2"><span>🍽️</span> Alimentación</td>
+                                        <td class="p-4 font-bold text-vinotinto-dark flex items-center gap-2"><i data-lucide="utensils" class="table-icon"></i> Alimentación</td>
                                         <td class="p-4 text-softgray">Mercado en casa (cocinando) + comer fuera una vez por semana</td>
                                         <td class="p-4 text-right font-mono font-semibold text-vinotinto-dark">$600.000 - $850.000</td>
                                     </tr>
                                     <tr class="hover:bg-crema-dark/20 transition-colors">
-                                        <td class="p-4 font-bold text-vinotinto-dark flex items-center gap-2"><span>🚲</span> Transporte</td>
+                                        <td class="p-4 font-bold text-vinotinto-dark flex items-center gap-2"><i data-lucide="bike" class="table-icon"></i> Transporte</td>
                                         <td class="p-4 text-softgray">Mantenimiento de bicicleta + pasajes ocasionales de TransMilenio</td>
                                         <td class="p-4 text-right font-mono font-semibold text-vinotinto-dark">$70.000 - $160.000</td>
                                     </tr>
                                     <tr class="hover:bg-crema-dark/20 transition-colors">
-                                        <td class="p-4 font-bold text-vinotinto-dark flex items-center gap-2"><span>🎨</span> Entretenimiento</td>
+                                        <td class="p-4 font-bold text-vinotinto-dark flex items-center gap-2"><i data-lucide="palette" class="table-icon"></i> Entretenimiento</td>
                                         <td class="p-4 text-softgray">Preparación de recetas, manualidades y salidas al aire libre / parques</td>
                                         <td class="p-4 text-right font-mono font-semibold text-vinotinto-dark">$200.000 - $450.000</td>
                                     </tr>
                                     <tr class="hover:bg-crema-dark/20 transition-colors">
-                                        <td class="p-4 font-bold text-vinotinto-dark flex items-center gap-2"><span>🧴</span> Aseo y Personales</td>
+                                        <td class="p-4 font-bold text-vinotinto-dark flex items-center gap-2"><i data-lucide="sparkles" class="table-icon"></i> Aseo y Personales</td>
                                         <td class="p-4 text-softgray">Elementos de aseo personal, salud básica, imprevistos cotidianos</td>
                                         <td class="p-4 text-right font-mono font-semibold text-vinotinto-dark">$250.000 - $350.000</td>
                                     </tr>
                                     <tr class="hover:bg-crema-dark/20 transition-colors">
-                                        <td class="p-4 font-bold text-vinotinto-dark flex items-center gap-2"><span>💰</span> Ahorro y Metas</td>
+                                        <td class="p-4 font-bold text-vinotinto-dark flex items-center gap-2"><i data-lucide="piggy-bank" class="table-icon"></i> Ahorro y Metas</td>
                                         <td class="p-4 text-softgray">Destinado a fondo de viajes (Japón/Colombia) y emergencias futuras</td>
                                         <td class="p-4 text-right font-mono font-semibold text-vinotinto-dark">$700.000 - $1.000.000</td>
                                     </tr>
@@ -301,7 +298,7 @@
                 <div class="lg:col-span-4 space-y-6">
                     <div class="bg-crema p-6 rounded-xl border border-vinotinto/20">
                         <h3 class="font-display font-bold text-lg text-vinotinto-dark mb-4 flex items-center gap-2">
-                            <span>📝</span> Explicación de Gastos Clave
+                            <i data-lucide="clipboard-list" class="table-icon"></i> Explicación de gastos clave
                         </h3>
                         
                         <div class="space-y-4 text-xs md:text-sm">
@@ -322,7 +319,7 @@
 
                     <div class="p-5 bg-vinotinto/10 border-2 border-vinotinto/20 rounded-xl">
                         <h4 class="text-sm font-bold text-vinotinto-dark flex items-center gap-2">
-                            <span class="animate-pulse">📌</span> Tip de Planificación
+                    <i data-lucide="pin" class="table-icon animate-pulse"></i> Tip de planificación
                         </h4>
                         <p class="text-xs text-softgray mt-2">
                             Ajustar los porcentajes reales te permite ver cómo cambia tu vida según tus ingresos reales, dándote más libertad para viajar.
@@ -389,7 +386,7 @@
                 <!-- Interactive Budget Customizer Sandbox -->
                 <div class="mt-8 pt-8 border-t border-vinotinto/20 text-left">
                     <h4 class="font-display font-bold text-base text-vinotinto-dark mb-4 flex items-center gap-2">
-                        <span>🧮</span> Simulador de Regla 50/30/20 Personalizable
+                        <i data-lucide="calculator" class="table-icon"></i> Simulador de regla 50/30/20 personalizable
                     </h4>
                     <p class="text-xs text-softgray mb-6">
                         Ajusta el salario neto proyectado para ver en tiempo real cómo se debe estructurar tu presupuesto utilizando la regla financiera ideal.
@@ -443,7 +440,7 @@
                 <div class="lg:col-span-2 bg-crema p-8 rounded-xl brutal-border brutal-shadow flex flex-col justify-between space-y-6">
                     <div class="space-y-4">
                         <div class="flex items-center gap-3">
-                            <span class="p-2.5 bg-vinotinto/10 text-vinotinto rounded-lg border border-vinotinto/20 text-xl">🩺</span>
+                            <span class="icon-badge"><i data-lucide="stethoscope"></i></span>
                             <div>
                                 <h3 class="font-display font-bold text-2xl text-vinotinto-dark">Medicina (Enfoque en Sala de Trauma)</h3>
                                 <span class="text-xs text-vinotinto font-mono font-semibold">Mi Opción Aspiracional Principal</span>
@@ -532,48 +529,48 @@
                 <!-- Tarjeta 1: Cruz Roja -->
                 <div class="bg-crema p-6 rounded-xl border border-vinotinto/20 flex flex-col justify-between">
                     <div class="space-y-4">
-                        <span class="text-2xl">🚑</span>
+                        <span class="icon-badge"><i data-lucide="ambulance"></i></span>
                         <h3 class="font-display font-bold text-lg text-vinotinto-dark">Cruz Roja Colombiana</h3>
                         <p class="text-xs sm:text-sm text-softgray leading-relaxed">
                             Involucrarme activamente en el Voluntariado Juvenil de Primeros Respondientes, una gran forma de obtener experiencia invaluable de campo en emergencias y servicios de trauma real.
                         </p>
                     </div>
                     <ul class="text-xs text-vinotinto-dark mt-4 space-y-1.5 border-t border-vinotinto/20 pt-4">
-                        <li>✓ Primeros auxilios básicos</li>
-                        <li>✓ Gestión del riesgo</li>
-                        <li>✓ Trabajo comunitario</li>
+                        <li class="check-item"><i data-lucide="check"></i> Primeros auxilios básicos</li>
+                        <li class="check-item"><i data-lucide="check"></i> Gestión del riesgo</li>
+                        <li class="check-item"><i data-lucide="check"></i> Trabajo comunitario</li>
                     </ul>
                 </div>
 
                 <!-- Tarjeta 2: Cursos SENA -->
                 <div class="bg-crema p-6 rounded-xl border border-vinotinto/20 flex flex-col justify-between">
                     <div class="space-y-4">
-                        <span class="text-2xl">📚</span>
+                        <span class="icon-badge"><i data-lucide="book-open"></i></span>
                         <h3 class="font-display font-bold text-lg text-vinotinto-dark">Servicio Nacional de Aprendizaje (SENA)</h3>
                         <p class="text-xs sm:text-sm text-softgray leading-relaxed">
                             Cursos virtuales y gratuitos con certificación oficial que puedo completar en mis tiempos libres desde el colegio.
                         </p>
                     </div>
                     <ul class="text-xs text-vinotinto-dark mt-4 space-y-1.5 border-t border-vinotinto/20 pt-4">
-                        <li>✓ Atención Integral al Usuario en Salud</li>
-                        <li>✓ Primeros Auxilios Avanzados</li>
-                        <li>✓ Humanización de los Servicios Médicos</li>
+                        <li class="check-item"><i data-lucide="check"></i> Atención integral al usuario en salud</li>
+                        <li class="check-item"><i data-lucide="check"></i> Primeros auxilios avanzados</li>
+                        <li class="check-item"><i data-lucide="check"></i> Humanización de los servicios médicos</li>
                     </ul>
                 </div>
 
                 <!-- Tarjeta 3: Habilidades Transversales -->
                 <div class="bg-crema p-6 rounded-xl border border-vinotinto/20 flex flex-col justify-between">
                     <div class="space-y-4">
-                        <span class="text-2xl">🌍</span>
+                        <span class="icon-badge"><i data-lucide="globe-2"></i></span>
                         <h3 class="font-display font-bold text-lg text-vinotinto-dark">Habilidades del Siglo XXI</h3>
                         <p class="text-xs sm:text-sm text-softgray leading-relaxed">
                             Aprovechar plataformas virtuales con becas (como Coursera o Platzi) para aprender herramientas técnicas globales.
                         </p>
                     </div>
                     <ul class="text-xs text-vinotinto-dark mt-4 space-y-1.5 border-t border-vinotinto/20 pt-4">
-                        <li>✓ Inglés B2 (Duolingo / Platzi)</li>
-                        <li>✓ Excel profesional y bases de datos</li>
-                        <li>✓ Salud y seguridad en el trabajo</li>
+                        <li class="check-item"><i data-lucide="check"></i> Inglés B2 (Duolingo / Platzi)</li>
+                        <li class="check-item"><i data-lucide="check"></i> Excel profesional y bases de datos</li>
+                        <li class="check-item"><i data-lucide="check"></i> Salud y seguridad en el trabajo</li>
                     </ul>
                 </div>
 
@@ -582,7 +579,7 @@
             <!-- Plan de Acción Línea de Tiempo -->
             <div class="mt-12 p-8 bg-crema brutal-border rounded-xl">
                 <h3 class="font-display font-bold text-xl text-vinotinto-dark mb-6 flex items-center gap-2">
-                    <span>📅</span> Plan de Acción Estructurado (Mis Próximos Pasos)
+                    <i data-lucide="calendar-check" class="table-icon"></i> Plan de acción estructurado (mis próximos pasos)
                 </h3>
                 <div class="relative border-l-2 border-vinotinto ml-4 space-y-8">
                     <!-- Step 1 -->
@@ -618,7 +615,7 @@
                 <span class="text-vinotinto font-mono font-semibold uppercase tracking-widest text-sm">Evidencias del Proceso</span>
                 <h2 class="text-3xl sm:text-4xl font-display font-black tracking-tight text-vinotinto-dark">Consultas Realizadas a la IA</h2>
                 <p class="text-softgray text-sm sm:text-base">
-                    Evidencias interactivas que simulan paso a paso los chats y directrices generadas con la inteligencia artificial durante las diferentes fases del proyecto.
+                    Capturas reales organizadas por fase, con la pregunta correspondiente al lado y versiones optimizadas para que la página cargue mejor.
                 </p>
             </div>
 
@@ -640,110 +637,25 @@
                     </button>
                 </div>
 
-                <!-- Tab Contents (Simulated AI Chats) -->
-                <div class="p-6 space-y-6 min-h-[400px]">
-                    
-                    <!-- Tab 1 CONTENT -->
-                    <div id="content-tab1" class="tab-content space-y-4">
-                        <div class="space-y-4">
-                            <!-- User message -->
-                            <div class="flex items-start gap-3 max-w-[85%]">
-                                <div class="bg-vinotinto text-crema-light rounded-lg p-3 text-xs sm:text-sm">
-                                    <p class="font-bold text-[10px] text-crema-dark uppercase mb-1">Peña Estefani (Tú)</p>
-                                    Tengo 16 años, estoy en grado 11 y vivo en Bogotá, quiero que actúes como un asesor financiero y me hagas 5 preguntas clave sobre cómo me imagino mi vida a los 25 años para calcular mi presupuesto ideal.
-                                </div>
-                            </div>
-                            <!-- AI response -->
-                            <div class="flex items-start gap-3 justify-end max-w-[85%] ml-auto">
-                                <div class="bg-crema-light border border-vinotinto/30 rounded-lg p-3 text-xs sm:text-sm text-textdark">
-                                    <p class="font-bold text-[10px] text-vinotinto uppercase mb-1">Inteligencia artificial (asesor)</p>
-                                    ¡Hola, Estefani! Qué gran iniciativa planificar esto desde tus 16 años, para ayudarte a diseñar tu presupuesto ideal para tus 25 años, por favor cuéntame: <br>
-                                    1. ¿Quieres vivir sola, con roomies o en pareja? <br>
-                                    2. ¿Cómo te transportarás principalmente? <br>
-                                    3. ¿Prefieres cocinar la mayor parte del tiempo o comer fuera? <br>
-                                    4. ¿Qué tipo de pasatiempos o salidas disfrutas? <br>
-                                    5. ¿Cuáles son tus metas de viajes a corto y largo plazo?
-                                </div>
-                            </div>
-                        </div>
+                <!-- Evidencias reales por fase -->
+                <div class="p-4 sm:p-6 min-h-[520px]">
+                    <div id="content-tab1" class="tab-content">
+                        <div class="evidence-carousel" data-phase="fase1"></div>
                     </div>
-
-                    <!-- Tab 2 CONTENT -->
-                    <div id="content-tab2" class="tab-content hidden space-y-4">
-                        <div class="space-y-4">
-                            <!-- User message -->
-                            <div class="flex items-start gap-3 max-w-[85%]">
-                                <div class="bg-vinotinto text-crema-light rounded-lg p-3 text-xs sm:text-sm">
-                                    <p class="font-bold text-[10px] text-crema-dark uppercase mb-1">Peña Estefani (Tú)</p>
-                                    Dame un estimado de cuánto cuesta hoy en día el arriendo de un apartamento independiente pequeño y los servicios públicos para una persona en una zona de estrato 3 o 4 en el sur de Bogotá.
-                                </div>
-                            </div>
-                            <!-- AI response -->
-                            <div class="flex items-start gap-3 justify-end max-w-[85%] ml-auto">
-                                <div class="bg-crema-light border border-vinotinto/30 rounded-lg p-3 text-xs sm:text-sm text-textdark text-left">
-                                    <p class="font-bold text-[10px] text-vinotinto uppercase mb-1">Inteligencia artificial</p>
-                                    Para el sur de Bogotá, en estratos 3 o 4, un apartamento pequeño e independiente cuesta entre <strong>$1.000.000 y $1.400.000 COP</strong> mensuales. <br><br>
-                                    Los servicios públicos (luz, agua, gas e internet) promedian entre <strong>$120.000 y $280.000 COP</strong> mensuales dependiendo del estrato exacto. <br><br>
-                                    Un presupuesto consolidado seguro de vivienda para ti sería de aproximadamente <strong>$1.380.000 COP/mes</strong>.
-                                </div>
-                            </div>
-                        </div>
+                    <div id="content-tab2" class="tab-content hidden">
+                        <div class="evidence-carousel" data-phase="fase2"></div>
                     </div>
-
-                    <!-- Tab 3 CONTENT -->
-                    <div id="content-tab3" class="tab-content hidden space-y-4">
-                        <div class="space-y-4">
-                            <!-- User message -->
-                            <div class="flex items-start gap-3 max-w-[85%]">
-                                <div class="bg-vinotinto text-crema-light rounded-lg p-3 text-xs sm:text-sm">
-                                    <p class="font-bold text-[10px] text-crema-dark uppercase mb-1">Peña Estefani (Tú)</p>
-                                    Con los datos anteriores, crea una tabla de presupuesto mensual usando la regla 50/30/20, añade un 10% extra para inflación e imprevistos y dime el total neto que necesito ganar al mes.
-                                </div>
-                            </div>
-                            <!-- AI response -->
-                            <div class="flex items-start gap-3 justify-end max-w-[85%] ml-auto">
-                                <div class="bg-crema-light border border-vinotinto/30 rounded-lg p-3 text-xs sm:text-sm text-textdark">
-                                    <p class="font-bold text-[10px] text-vinotinto uppercase mb-1">Inteligencia artificial</p>
-                                    Claro, organizando tu estilo de vida bajo la regla 50/30/20:<br>
-                                    - <strong>Necesidades (50%):</strong> $2.550.000 COP (vivienda, comida, transporte y aseo)<br>
-                                    - <strong>Deseos (30%):</strong> $450.000 COP (salidas a la naturaleza, repostería)<br>
-                                    - <strong>Ahorro (20%):</strong> $1.020.000 COP (fondo de viaje a Japón)<br><br>
-                                    Subtotal: $4.020.000 COP + 10% de inflación e imprevistos ($402.000 COP). <br>
-                                    <strong>Total mensual requerido: $4.422.000 COP netos.</strong>
-                                </div>
-                            </div>
-                        </div>
+                    <div id="content-tab3" class="tab-content hidden">
+                        <div class="evidence-carousel" data-phase="fase3"></div>
                     </div>
-
-                    <!-- Tab 4 CONTENT -->
-                    <div id="content-tab4" class="tab-content hidden space-y-4">
-                        <div class="space-y-4">
-                            <!-- User message -->
-                            <div class="flex items-start gap-3 max-w-[85%]">
-                                <div class="bg-vinotinto text-crema-light rounded-lg p-3 text-xs sm:text-sm">
-                                    <p class="font-bold text-[10px] text-crema-dark uppercase mb-1">Peña Estefani (Tú)</p>
-                                    Quiero estudiar medicina enfocado en sala de trauma. ¿Esta carrera cubre mi presupuesto? Además recomiéndame cursos gratis para empezar desde ya siendo estudiante de colegio público.
-                                </div>
-                            </div>
-                            <!-- AI response -->
-                            <div class="flex items-start gap-3 justify-end max-w-[85%] ml-auto">
-                                <div class="bg-crema-light border border-vinotinto/30 rounded-lg p-3 text-xs sm:text-sm text-textdark">
-                                    <p class="font-bold text-[10px] text-vinotinto uppercase mb-1">Inteligencia artificial</p>
-                                    ¡Excelente elección! Un médico general de entrada en Colombia gana entre <strong>$4.000.000 y $6.500.000 COP</strong>, lo cual cubre perfectamente tu meta de $4.422.000, al especializarte en trauma tus ingresos pueden duplicarse.<br><br>
-                                    <strong>Ruta gratuita desde ya:</strong><br>
-                                    - <strong>SENA:</strong> Cursos virtuales de Primeros Auxilios y Humanización en Salud.<br>
-                                    - <strong>Cruz Roja:</strong> Regístrate como voluntario juvenil.<br>
-                                    - <strong>Inglés:</strong> Practica gratis para tu viaje a Japón.
-                                </div>
-                            </div>
-                        </div>
+                    <div id="content-tab4" class="tab-content hidden">
+                        <div class="evidence-carousel" data-phase="fase4"></div>
                     </div>
-
                 </div>
                 
                 <!-- Chat Footer Info -->
                 <div class="bg-crema-dark/50 p-4 border-t border-vinotinto text-center text-[11px] text-softgray">
-                    Evidencias simuladas de la conversación interactiva con modelos de lenguaje generativo, como ChatGPT o Claude, documentadas en Proyecto_plan_financiero_ordenado_actualizado.docx.
+                    Capturas reales del proceso de consulta con IA, organizadas por fase y optimizadas en formato WebP para mejorar la carga de la página.
                 </div>
             </div>
         </section>
@@ -768,7 +680,7 @@
                     <span class="text-xs font-mono font-bold text-vinotinto uppercase block">Pregunta 1</span>
                     <h3 class="font-display font-bold text-base md:text-lg text-vinotinto-dark">¿El estilo de vida que deseo es económicamente viable?</h3>
                     <p class="text-xs sm:text-sm text-softgray leading-relaxed">
-                        Sí, considero que mi estilo de vida deseado es totalmente viable, esto se debe a que no priorizo lujos ostentosos o superficiales, sino una vida tranquila centrada en experiencias en la naturaleza, pasatiempos caseros económicos y un arriendo en un sector modesto pero seguro; al calcular minuciosamente cada gasto, veo que con una correcta planeación profesional es una meta alcanzable.
+                        Sí, creo que es viable porque no estoy imaginando una vida llena de lujos, sino una vida tranquila, estable y con espacio para disfrutar lo que realmente me gusta. Al poner cada gasto en números entendí que mi meta no depende de ganar una fortuna, sino de prepararme bien, elegir una profesión con futuro y aprender a administrar mi dinero desde ahora.
                     </p>
                 </div>
 
@@ -777,7 +689,7 @@
                     <span class="text-xs font-mono font-bold text-vinotinto uppercase block">Pregunta 2</span>
                     <h3 class="font-display font-bold text-base md:text-lg text-vinotinto-dark">¿Qué decisiones debo tomar desde ahora para lograr mis metas?</h3>
                     <p class="text-xs sm:text-sm text-softgray leading-relaxed">
-                        Debo comprometerme profundamente con terminar mi grado 11 con honores y buscar opciones de ingreso a la educación superior en salud, paralelamente, mi decisión clave es empezar a formarme de manera gratuita en primeros auxilios con el SENA y sumarme a programas de voluntariado de la Cruz Roja, construyendo habilidades del mundo real y disciplina financiera desde mi adolescencia.
+                        Desde ahora debo tomar decisiones pequeñas pero constantes, terminar el colegio con buen rendimiento, buscar opciones reales para estudiar en el área de la salud, aprender primeros auxilios y acercarme a espacios de voluntariado. También necesito cuidar mis hábitos financieros, porque ahorrar y organizarme desde joven me puede acercar mucho más rápido a la vida que quiero.
                     </p>
                 </div>
 
@@ -786,7 +698,7 @@
                     <span class="text-xs font-mono font-bold text-vinotinto uppercase block">Pregunta 3</span>
                     <h3 class="font-display font-bold text-base md:text-lg text-vinotinto-dark">¿Qué aprendí sobre el manejo de las finanzas personales?</h3>
                     <p class="text-xs sm:text-sm text-softgray leading-relaxed">
-                        He comprendido que unas finanzas sanas no surgen de la improvisación ni de esperar a ganar mucho dinero para empezar a administrarlo, el verdadero secreto financiero radica en estructurar presupuestos con reglas científicas como la 50/30/20 y tener el hábito inquebrantable del ahorro programado; organizar mis cuentas me da control absoluto y paz mental sobre mi futuro.
+                        Aprendí que manejar bien el dinero no empieza cuando uno ya gana mucho, empieza cuando uno se toma en serio sus decisiones. Hacer un presupuesto me ayudó a ver que cada gasto tiene un peso y que el ahorro no debería ser lo que sobra, sino una parte fija de mi plan de vida.
                     </p>
                 </div>
 
@@ -795,7 +707,7 @@
                     <span class="text-xs font-mono font-bold text-vinotinto uppercase block">Pregunta 4</span>
                     <h3 class="font-display font-bold text-base md:text-lg text-vinotinto-dark">¿Cómo puede ayudarme la IA en la planificación de mi futuro?</h3>
                     <p class="text-xs sm:text-sm text-softgray leading-relaxed">
-                        La IA se convirtió en una guía fantástica y una mentora financiera, me permitió ordenar mis deseos abstractos en tablas de datos organizadas, calcular variables complejas como la provisión por inflación y proyectar de manera rápida las mejores rutas de formación técnica y salarios de mi mercado local; es un acelerador del conocimiento que, usado de forma ética, potencia enormemente mis decisiones.
+                        La IA me ayudó a ordenar ideas que al principio estaban muy sueltas, como cuánto podría costar vivir sola, qué gastos debía tener en cuenta y qué caminos profesionales podían acercarme a ese presupuesto. No reemplaza mi criterio, pero sí funciona como una herramienta útil para preguntar mejor, comparar opciones y tomar decisiones más informadas.
                     </p>
                 </div>
 
