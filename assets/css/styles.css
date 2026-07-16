@@ -184,6 +184,40 @@
     animation: budget-fill 900ms ease both;
 }
 
+.total-row td {
+    padding-top: 1.25rem;
+    padding-bottom: 1.25rem;
+}
+
+.total-badge {
+    display: inline-flex;
+    min-width: 13.5rem;
+    flex-direction: column;
+    align-items: flex-end;
+    gap: 0.25rem;
+    border: 2px solid #832C35;
+    border-radius: 0.65rem;
+    background: #FDFBF7;
+    padding: 0.75rem 0.95rem;
+    box-shadow: 3px 3px 0 0 #832C35;
+}
+
+.total-badge span {
+    color: #832C35;
+    font-size: 0.68rem;
+    font-weight: 800;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+}
+
+.total-badge strong {
+    color: #4E1218;
+    font-family: "Space Grotesk", sans-serif;
+    font-size: clamp(1rem, 1.6vw, 1.35rem);
+    line-height: 1.1;
+    white-space: nowrap;
+}
+
 @keyframes budget-fill {
     from {
         transform: scaleX(0);
@@ -350,6 +384,12 @@
     .evidence-frame img {
         width: min(100%, 320px);
         max-height: 520px;
+    }
+
+    .total-badge {
+        min-width: 11.5rem;
+        align-items: flex-start;
+        text-align: left;
     }
 }
 
