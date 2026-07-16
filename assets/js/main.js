@@ -181,6 +181,35 @@ function initRevealAnimations() {
     animatedItems.forEach(item => observer.observe(item));
 }
 
+function initBudgetTable() {
+    const rows = [...document.querySelectorAll('.budget-row')];
+    if (!rows.length) {
+        return;
+    }
+
+    const maxValue = Math.max(...rows.map(row => Number(row.dataset.max || 0)));
+
+    rows.forEach((row, index) => {
+        const rowMax = Number(row.dataset.max || 0);
+        const width = Math.max(8, Math.round((rowMax / maxValue) * 100));
+        row.style.setProperty('--budget-width', `${width}%`);
+
+        row.addEventListener('mouseenter', () => {
+            rows.forEach(item => item.classList.remove('is-active'));
+            row.classList.add('is-active');
+        });
+
+        row.addEventListener('click', () => {
+            rows.forEach(item => item.classList.remove('is-active'));
+            row.classList.add('is-active');
+        });
+
+        if (index === 0) {
+            row.classList.add('is-active');
+        }
+    });
+}
+
 if (mobileMenuBtn && mobileMenu && menuIcon) {
     mobileMenuBtn.addEventListener('click', () => {
         mobileMenu.classList.toggle('hidden');
@@ -218,6 +247,7 @@ if (salarySlider && salaryVal && calcNec && calcDes && calcAho) {
 }
 
 initRevealAnimations();
+initBudgetTable();
 
 if (window.lucide) {
     window.lucide.createIcons();
