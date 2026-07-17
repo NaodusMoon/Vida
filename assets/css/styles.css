@@ -143,8 +143,11 @@
     position: absolute;
     inset: 0;
     background:
-        linear-gradient(90deg, rgba(253, 251, 247, 0.72) 0%, rgba(253, 251, 247, 0.5) 48%, rgba(253, 251, 247, 0.28) 100%),
-        linear-gradient(180deg, rgba(131, 44, 53, 0.12) 0%, rgba(253, 251, 247, 0.2) 55%, rgba(253, 251, 247, 0.58) 100%);
+        linear-gradient(90deg, rgba(253, 251, 247, 0.76) 0%, rgba(253, 251, 247, 0.56) 48%, rgba(253, 251, 247, 0.34) 100%),
+        linear-gradient(180deg, rgba(131, 44, 53, 0.18) 0%, rgba(253, 251, 247, 0.2) 55%, rgba(253, 251, 247, 0.62) 100%),
+        repeating-linear-gradient(0deg, rgba(78, 18, 24, 0.1) 0 1px, transparent 1px 12px),
+        repeating-linear-gradient(90deg, rgba(78, 18, 24, 0.08) 0 1px, transparent 1px 12px);
+    background-blend-mode: normal, normal, multiply, multiply;
     pointer-events: none;
 }
 
@@ -153,13 +156,13 @@
 }
 
 .pillar-card > img {
-    flex: 0 0 6.5rem;
-    width: 6.5rem;
-    min-height: 6rem;
+    flex: 0 0 9rem;
+    width: 9rem;
+    min-height: 8.5rem;
     object-fit: cover;
     border: 2px solid #832C35;
-    border-radius: 0.55rem;
-    box-shadow: 3px 3px 0 0 rgba(131, 44, 53, 0.38);
+    border-radius: 0.7rem;
+    box-shadow: 4px 4px 0 0 rgba(131, 44, 53, 0.42);
 }
 
 .hero-video-card {
@@ -606,16 +609,16 @@
 @media (max-width: 640px) {
     .pillar-card {
         display: grid;
-        grid-template-columns: 5rem minmax(0, 1fr);
-        gap: 0.85rem;
+        grid-template-columns: 7rem minmax(0, 1fr);
+        gap: 0.95rem;
     }
 
     .pillar-card > img {
         grid-row: span 2;
-        width: 5rem;
-        min-height: 5rem;
+        width: 7rem;
+        min-height: 7.25rem;
         height: 100%;
-        flex-basis: 5rem;
+        flex-basis: 7rem;
     }
 
     .pillar-card .icon-badge {
