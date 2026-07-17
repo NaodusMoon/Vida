@@ -61,7 +61,7 @@ const evidenceData = {
         summary: 'Estas evidencias muestran la búsqueda de carreras, salarios, cursos gratuitos y acciones concretas para alcanzar el ingreso necesario.',
         items: [
             ['evidencia-27.webp', 'Prompt para buscar carreras o habilidades que cubran la cifra mensual requerida.'],
-            ['evidencia-28.webp', 'Solicitud de cursos gratuitos con certificación para empezar desde el colegio.'],
+            ['evidencia-28.webp', 'Solicitud de cursos gratuitos con certificación para completar en tiempos libres.'],
             ['evidencia-29.webp', 'Recomendación de carreras y habilidades que pueden cubrir o superar el ingreso meta.'],
             ['evidencia-30.webp', 'Comparación inicial de medicina, enfermería y atención prehospitalaria.'],
             ['evidencia-31.webp', 'Habilidades digitales y complementarias con buena proyección laboral.'],
