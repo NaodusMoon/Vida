@@ -114,6 +114,21 @@
     text-transform: uppercase;
 }
 
+.hero-inline-video {
+    overflow: hidden;
+    border: 2px solid #832C35;
+    border-radius: 0.75rem;
+    background: #2B1A1D;
+    box-shadow: 3px 3px 0 0 #832C35;
+}
+
+.hero-inline-video video {
+    width: 100%;
+    aspect-ratio: 16 / 10;
+    object-fit: cover;
+    display: block;
+}
+
 .hero-video-card {
     position: relative;
     width: min(100%, 28rem);
