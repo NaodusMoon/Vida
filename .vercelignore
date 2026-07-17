@@ -1,4 +1,5 @@
 .playwright-cli/
+.codex-deploy/
 assets/img/*.jpg
 assets/img/logos/coursera-logos.zip
 assets/img/logos/coursera/

@@ -63,7 +63,13 @@
     <main class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8 space-y-24">
 
         <!-- 1. PORTADA / INICIO -->
-        <section id="inicio" class="min-h-[80vh] flex flex-col justify-center items-center py-12 lg:py-20 relative">
+        <section id="inicio" class="hero-section min-h-[80vh] flex flex-col justify-center items-center py-12 lg:py-20 relative">
+            <div class="hero-bg-video" aria-hidden="true">
+                <video autoplay muted loop playsinline poster="assets/img/life/japon-sakura.webp">
+                    <source src="assets/video/hero-estefani.mp4" type="video/mp4">
+                </video>
+                <div class="hero-bg-shade"></div>
+            </div>
             <div class="absolute -top-10 left-10 w-48 h-48 bg-vinotinto/5 rounded-full blur-3xl pointer-events-none"></div>
             <div class="absolute bottom-10 right-10 w-64 h-64 bg-crema-dark/45 rounded-full blur-3xl pointer-events-none"></div>
 
@@ -105,34 +111,11 @@
                     </div>
                 </div>
 
-                <!-- Hero Video Area -->
+                <!-- Hero Profile Area -->
                 <div class="lg:col-span-5 flex justify-center">
-                    <div class="hidden">
-                        <video class="hero-video" autoplay muted loop playsinline poster="assets/img/life/japon-sakura.webp" aria-label="Video principal del proyecto de vida de Estefani">
-                            <source src="assets/video/hero-estefani.mp4" type="video/mp4">
-                        </video>
-                        <div class="hero-video-shade"></div>
-                        <div class="hero-video-content">
-                            <div>
-                                <span>Proyecto personal</span>
-                                <h3>Estefani PeÃ±a</h3>
-                                <p>Estudiante Grado 11</p>
-                            </div>
-                            <div class="hero-video-stats">
-                                <div><strong>25</strong><small>Edad Meta</small></div>
-                                <div><strong>100%</strong><small>Viable</small></div>
-                                <div><strong>BogotÃ¡</strong><small>Ciudad</small></div>
-                            </div>
-                        </div>
-                    </div>
                     <div class="relative group">
                         <div class="absolute inset-0 bg-vinotinto/10 rounded-2xl transform translate-x-4 translate-y-4 brutal-border group-hover:translate-x-2 group-hover:translate-y-2 transition-transform duration-300"></div>
                         <div class="relative bg-crema p-8 rounded-2xl brutal-border w-80 sm:w-96 text-center space-y-6">
-                            <div class="hero-inline-video">
-                                <video autoplay muted loop playsinline poster="assets/img/life/japon-sakura.webp" aria-label="Video principal del proyecto de vida de Estefani">
-                                    <source src="assets/video/hero-estefani.mp4" type="video/mp4">
-                                </video>
-                            </div>
                             <!-- Foto de perfil -->
                             <div class="w-32 h-32 mx-auto bg-gradient-to-br from-crema-dark to-crema rounded-full flex items-center justify-center border-2 border-vinotinto overflow-hidden">
                                 <img src="assets/img/avatar-estefani.png" alt="Foto de Estefani Peña" class="w-full h-full object-cover object-center" loading="lazy" decoding="async">

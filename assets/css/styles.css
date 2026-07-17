@@ -114,19 +114,35 @@
     text-transform: uppercase;
 }
 
-.hero-inline-video {
+.hero-section {
     overflow: hidden;
-    border: 2px solid #832C35;
-    border-radius: 0.75rem;
-    background: #2B1A1D;
-    box-shadow: 3px 3px 0 0 #832C35;
+    isolation: isolate;
+    border-radius: 1.5rem;
 }
 
-.hero-inline-video video {
+.hero-bg-video {
+    position: absolute;
+    inset: 0;
+    z-index: 0;
+    overflow: hidden;
+    border-radius: inherit;
+    background: #2B1A1D;
+}
+
+.hero-bg-video video {
     width: 100%;
-    aspect-ratio: 16 / 10;
+    height: 100%;
     object-fit: cover;
     display: block;
+}
+
+.hero-bg-shade {
+    position: absolute;
+    inset: 0;
+    background:
+        linear-gradient(90deg, rgba(253, 251, 247, 0.92) 0%, rgba(253, 251, 247, 0.78) 48%, rgba(253, 251, 247, 0.58) 100%),
+        linear-gradient(180deg, rgba(131, 44, 53, 0.26) 0%, rgba(253, 251, 247, 0.42) 55%, rgba(253, 251, 247, 0.86) 100%);
+    pointer-events: none;
 }
 
 .hero-video-card {
