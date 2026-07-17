@@ -119,6 +119,7 @@
     isolation: isolate;
     width: 100vw;
     margin-inline: calc(50% - 50vw);
+    margin-top: -2rem;
     padding-inline: clamp(1.25rem, 4vw, 3rem);
     border-radius: 0;
 }
