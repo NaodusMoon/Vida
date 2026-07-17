@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>¿Cuánto cuesta vivir como quiero vivir? - Estefani Peña</title>
+    <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%23932939'/%3E%3Ctext x='32' y='40' text-anchor='middle' font-size='28' font-family='Arial' font-weight='700' fill='%23fffaf5'%3EEP%3C/text%3E%3C/svg%3E">
     <!-- Tailwind CSS -->
     <script src="https://cdn.tailwindcss.com"></script>
     <script src="https://unpkg.com/lucide@latest"></script>
@@ -109,12 +110,9 @@
                     <div class="relative group">
                         <div class="absolute inset-0 bg-vinotinto/10 rounded-2xl transform translate-x-4 translate-y-4 brutal-border group-hover:translate-x-2 group-hover:translate-y-2 transition-transform duration-300"></div>
                         <div class="relative bg-crema p-8 rounded-2xl brutal-border w-80 sm:w-96 text-center space-y-6">
-                            <!-- Custom SVG Avatar -->
+                            <!-- Foto de perfil -->
                             <div class="w-32 h-32 mx-auto bg-gradient-to-br from-crema-dark to-crema rounded-full flex items-center justify-center border-2 border-vinotinto overflow-hidden">
-                                <svg class="w-24 h-24 text-vinotinto" viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                    <circle cx="50" cy="40" r="22" fill="currentColor" opacity="0.85"/>
-                                    <path d="M15 85C15 65.67 30.67 55 50 55C69.33 55 85 65.67 85 85" fill="currentColor"/>
-                                </svg>
+                                <img src="assets/img/avatar-estefani.png" alt="Foto de Estefani Peña" class="w-full h-full object-cover object-center" loading="lazy" decoding="async">
                             </div>
                             <div class="space-y-2">
                                 <h3 class="font-display font-bold text-xl text-vinotinto-dark">Estefani Peña</h3>
@@ -259,32 +257,32 @@
                                 <tbody class="divide-y divide-vinotinto/15 text-sm">
                                     <tr class="budget-row hover:bg-crema-dark/20 transition-colors" data-min="1380000" data-max="1380000">
                                         <td class="p-4 font-bold text-vinotinto-dark flex items-center gap-2"><i data-lucide="home" class="table-icon"></i> Vivienda</td>
-                                        <td class="p-4 text-softgray">Arriendo de apartamento independiente en el sur de Bogotá + servicios públicos de estrato 3 o 4</td>
+                                        <td class="p-4 text-softgray">Arriendo de apartamento independiente en el sur de Bogotá + servicios públicos de estrato 3 o 4.</td>
                                         <td class="p-4 text-right font-mono font-semibold text-vinotinto-dark cost-cell"><span>$1.380.000</span><span class="budget-bar"><span></span></span></td>
                                     </tr>
                                     <tr class="budget-row hover:bg-crema-dark/20 transition-colors" data-min="600000" data-max="850000">
                                         <td class="p-4 font-bold text-vinotinto-dark flex items-center gap-2"><i data-lucide="utensils" class="table-icon"></i> Alimentación</td>
-                                        <td class="p-4 text-softgray">Mercado en casa (cocinando) + comer fuera una vez por semana</td>
+                                        <td class="p-4 text-softgray">Mercado en casa (cocinando) + comer fuera una vez por semana.</td>
                                         <td class="p-4 text-right font-mono font-semibold text-vinotinto-dark cost-cell"><span>$600.000 - $850.000</span><span class="budget-bar"><span></span></span></td>
                                     </tr>
                                     <tr class="budget-row hover:bg-crema-dark/20 transition-colors" data-min="70000" data-max="160000">
                                         <td class="p-4 font-bold text-vinotinto-dark flex items-center gap-2"><i data-lucide="bike" class="table-icon"></i> Transporte</td>
-                                        <td class="p-4 text-softgray">Mantenimiento de bicicleta + pasajes ocasionales de TransMilenio</td>
+                                        <td class="p-4 text-softgray">Mantenimiento de bicicleta + pasajes ocasionales de TransMilenio.</td>
                                         <td class="p-4 text-right font-mono font-semibold text-vinotinto-dark cost-cell"><span>$70.000 - $160.000</span><span class="budget-bar"><span></span></span></td>
                                     </tr>
                                     <tr class="budget-row hover:bg-crema-dark/20 transition-colors" data-min="200000" data-max="450000">
                                         <td class="p-4 font-bold text-vinotinto-dark flex items-center gap-2"><i data-lucide="palette" class="table-icon"></i> Entretenimiento</td>
-                                        <td class="p-4 text-softgray">Preparación de recetas, manualidades y salidas al aire libre / parques</td>
+                                        <td class="p-4 text-softgray">Preparación de recetas, manualidades y salidas al aire libre / parques.</td>
                                         <td class="p-4 text-right font-mono font-semibold text-vinotinto-dark cost-cell"><span>$200.000 - $450.000</span><span class="budget-bar"><span></span></span></td>
                                     </tr>
                                     <tr class="budget-row hover:bg-crema-dark/20 transition-colors" data-min="250000" data-max="350000">
                                         <td class="p-4 font-bold text-vinotinto-dark flex items-center gap-2"><i data-lucide="sparkles" class="table-icon"></i> Aseo y Personales</td>
-                                        <td class="p-4 text-softgray">Elementos de aseo personal, salud básica, imprevistos cotidianos</td>
+                                        <td class="p-4 text-softgray">Elementos de aseo personal, salud básica, imprevistos cotidianos.</td>
                                         <td class="p-4 text-right font-mono font-semibold text-vinotinto-dark cost-cell"><span>$250.000 - $350.000</span><span class="budget-bar"><span></span></span></td>
                                     </tr>
                                     <tr class="budget-row hover:bg-crema-dark/20 transition-colors" data-min="700000" data-max="1000000">
                                         <td class="p-4 font-bold text-vinotinto-dark flex items-center gap-2"><i data-lucide="piggy-bank" class="table-icon"></i> Ahorro y Metas</td>
-                                        <td class="p-4 text-softgray">Destinado a fondo de viajes (Japón/Colombia) y emergencias futuras</td>
+                                        <td class="p-4 text-softgray">Destinado a fondo de viajes (Japón/Colombia) y emergencias futuras.</td>
                                         <td class="p-4 text-right font-mono font-semibold text-vinotinto-dark cost-cell"><span>$700.000 - $1.000.000</span><span class="budget-bar"><span></span></span></td>
                                     </tr>
                                     <!-- Total Row -->
@@ -561,36 +559,13 @@
                         </div>
                         <h3 class="font-display font-bold text-lg text-vinotinto-dark">Servicio Nacional de Aprendizaje (SENA)</h3>
                         <p class="text-xs sm:text-sm text-softgray leading-relaxed">
-                            Cursos virtuales y gratuitos con certificación oficial que puedo completar en mis tiempos libres desde el colegio.
+                            Cursos gratuitos con certificación oficial que puedo completar en mis tiempos libres desde el colegio.
                         </p>
                     </div>
                     <ul class="text-xs text-vinotinto-dark mt-4 space-y-1.5 border-t border-vinotinto/20 pt-4">
                         <li class="check-item"><i data-lucide="check"></i> Atención integral al usuario en salud</li>
                         <li class="check-item"><i data-lucide="check"></i> Primeros auxilios avanzados</li>
                         <li class="check-item"><i data-lucide="check"></i> Humanización de los servicios médicos</li>
-                    </ul>
-                </div>
-
-                <!-- Tarjeta 3: Habilidades Transversales -->
-                <div class="bg-crema p-6 rounded-xl border border-vinotinto/20 flex flex-col justify-between">
-                    <div class="space-y-4">
-                        <div class="brand-logo-row">
-                            <div class="brand-logo-wrap compact-logo">
-                                <img src="assets/img/logos/coursera.svg" alt="Logo de Coursera" loading="lazy" decoding="async">
-                            </div>
-                            <div class="brand-logo-wrap compact-logo dark-logo">
-                                <img src="assets/img/logos/platzi.svg" alt="Logo de Platzi" loading="lazy" decoding="async">
-                            </div>
-                        </div>
-                        <h3 class="font-display font-bold text-lg text-vinotinto-dark">Habilidades del Siglo XXI</h3>
-                        <p class="text-xs sm:text-sm text-softgray leading-relaxed">
-                            Aprovechar plataformas virtuales con becas (como Coursera o Platzi) para aprender herramientas técnicas globales.
-                        </p>
-                    </div>
-                    <ul class="text-xs text-vinotinto-dark mt-4 space-y-1.5 border-t border-vinotinto/20 pt-4">
-                        <li class="check-item"><i data-lucide="check"></i> Inglés B2 (Duolingo / Platzi)</li>
-                        <li class="check-item"><i data-lucide="check"></i> Excel profesional y bases de datos</li>
-                        <li class="check-item"><i data-lucide="check"></i> Salud y seguridad en el trabajo</li>
                     </ul>
                 </div>
 
