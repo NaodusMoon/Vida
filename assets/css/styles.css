@@ -114,6 +114,67 @@
     text-transform: uppercase;
 }
 
+.life-gallery {
+    display: grid;
+    grid-template-columns: minmax(0, 1.25fr) minmax(0, 0.85fr) minmax(0, 0.85fr);
+    gap: 1rem;
+}
+
+.life-card {
+    position: relative;
+    min-height: 17rem;
+    overflow: hidden;
+    border: 2px solid #832C35;
+    border-radius: 0.75rem;
+    background: #2B1A1D;
+    box-shadow: 4px 4px 0 0 #832C35;
+}
+
+.life-card-large {
+    grid-row: span 2;
+    min-height: 35rem;
+}
+
+.life-card img {
+    width: 100%;
+    height: 100%;
+    min-height: inherit;
+    object-fit: cover;
+    display: block;
+    filter: saturate(0.98) contrast(1.03);
+    transition: transform 550ms ease;
+}
+
+.life-card:hover img {
+    transform: scale(1.04);
+}
+
+.life-card figcaption {
+    position: absolute;
+    inset-inline: 0.85rem;
+    bottom: 0.85rem;
+    border: 1px solid rgba(253, 251, 247, 0.35);
+    border-radius: 0.65rem;
+    background: rgba(43, 26, 29, 0.78);
+    color: #FDFBF7;
+    padding: 0.85rem;
+    font-size: 0.78rem;
+    font-weight: 600;
+    line-height: 1.45;
+    backdrop-filter: blur(8px);
+}
+
+.life-card figcaption span {
+    display: block;
+    margin-bottom: 0.25rem;
+    color: #F4EAE1;
+    font-family: "Space Grotesk", sans-serif;
+    font-size: 0.72rem;
+    font-weight: 800;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+}
+
 .brand-logo-wrap {
     width: 100%;
     min-height: 4.25rem;
@@ -372,6 +433,21 @@
 }
 
 @media (max-width: 900px) {
+    .life-gallery {
+        grid-template-columns: 1fr;
+    }
+
+    .life-card,
+    .life-card-large {
+        grid-row: auto;
+        min-height: 20rem;
+    }
+
+    .life-card figcaption {
+        inset-inline: 0.75rem;
+        bottom: 0.75rem;
+    }
+
     .evidence-carousel {
         grid-template-columns: 1fr;
     }
