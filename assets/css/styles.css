@@ -337,6 +337,11 @@
     max-height: 42px;
 }
 
+.first-responder-logo img {
+    max-width: 220px;
+    max-height: 64px;
+}
+
 .dark-logo {
     background: #102017;
 }

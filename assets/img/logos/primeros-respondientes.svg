@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 120" role="img" aria-labelledby="title desc">
+  <title id="title">Primeros Respondientes</title>
+  <desc id="desc">Escudo con cruz medica y pulso cardiaco para voluntariado en primeros respondientes.</desc>
+  <rect width="320" height="120" rx="18" fill="#FDFBF7"/>
+  <path d="M58 18 100 32v27c0 26-17 44-42 53-25-9-42-27-42-53V32l42-14Z" fill="#832C35"/>
+  <path d="M58 29 89 39v21c0 19-12 32-31 40-19-8-31-21-31-40V39l31-10Z" fill="#F4EAE1"/>
+  <path d="M52 43h12v14h14v12H64v14H52V69H38V57h14V43Z" fill="#832C35"/>
+  <path d="M111 67h26l10-18 17 37 14-25h27" fill="none" stroke="#832C35" stroke-width="7" stroke-linecap="round" stroke-linejoin="round"/>
+  <text x="112" y="44" fill="#4E1218" font-family="Arial, Helvetica, sans-serif" font-size="18" font-weight="800" letter-spacing="1.2">PRIMEROS</text>
+  <text x="112" y="102" fill="#832C35" font-family="Arial, Helvetica, sans-serif" font-size="20" font-weight="800" letter-spacing="1.2">RESPONDIENTES</text>
+</svg>
