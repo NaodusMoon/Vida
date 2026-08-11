@@ -162,6 +162,46 @@ function renderEvidenceCarousel(container) {
     updateCarousel();
 }
 
+function initCompositionCarousel(container) {
+    const pages = [
+        {
+            image: 'assets/img/composicion/composicion-01.jpg',
+            alt: 'Primera página manuscrita de la composición personal',
+            description: 'Una reflexión sobre la familia, los vínculos y los momentos que han dejado huella en mi forma de entenderme y relacionarme con los demás.'
+        },
+        {
+            image: 'assets/img/composicion/composicion-02.jpg',
+            alt: 'Segunda página manuscrita de la composición personal',
+            description: 'Una mirada a los valores que me acompañan hoy y a la persona que quiero seguir construyendo: empática, fuerte, generosa y capaz de dar esperanza.'
+        }
+    ];
+
+    let currentIndex = 0;
+    const image = container.querySelector('img');
+    const description = container.querySelector('.composition-description');
+    const counter = container.querySelector('.carousel-counter');
+
+    function updateCarousel() {
+        const page = pages[currentIndex];
+        image.src = page.image;
+        image.alt = page.alt;
+        description.textContent = page.description;
+        counter.textContent = `Página ${currentIndex + 1} de ${pages.length}`;
+    }
+
+    container.querySelector('[data-action="prev"]').addEventListener('click', () => {
+        currentIndex = (currentIndex - 1 + pages.length) % pages.length;
+        updateCarousel();
+    });
+
+    container.querySelector('[data-action="next"]').addEventListener('click', () => {
+        currentIndex = (currentIndex + 1) % pages.length;
+        updateCarousel();
+    });
+
+    updateCarousel();
+}
+
 function initRevealAnimations() {
     const animatedItems = document.querySelectorAll('main section, footer, main .brutal-border, main .border');
     animatedItems.forEach(item => item.classList.add('reveal'));
@@ -231,6 +271,7 @@ document.querySelectorAll('[data-tab]').forEach(button => {
 });
 
 document.querySelectorAll('.evidence-carousel').forEach(renderEvidenceCarousel);
+document.querySelectorAll('.composition-carousel').forEach(initCompositionCarousel);
 
 if (salarySlider && salaryVal && calcNec && calcDes && calcAho) {
     salarySlider.addEventListener('input', event => {
