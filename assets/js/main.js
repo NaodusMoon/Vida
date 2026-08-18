@@ -202,6 +202,50 @@ function initCompositionCarousel(container) {
     updateCarousel();
 }
 
+function initHiddenHistoryCarousel(container) {
+    const slides = [
+        {
+            image: 'assets/img/detras-de-la-vida/elementos-ocultos.jpg',
+            alt: 'Cuadro manuscrito para identificar los elementos ocultos de mi historia',
+            title: '2. Identificar los elementos ocultos',
+            description: 'Las personas, el contexto y las decisiones que he tomado también forman parte de la vida que estoy construyendo. Reconocerlas me ayuda a entender mejor mis valores, oportunidades y metas.'
+        },
+        {
+            image: 'assets/img/detras-de-la-vida/reelaborar-historia.jpg',
+            alt: 'Reflexión manuscrita en colores para reelaborar mi historia',
+            title: '3. Reelaborar la historia',
+            description: 'Al relacionar mis experiencias con mi contexto, puedo comprender mi historia de otra manera: con aprendizajes, apoyos y decisiones que me permiten proyectar mi futuro con mayor intención.'
+        }
+    ];
+
+    let currentIndex = 0;
+    const image = container.querySelector('img');
+    const title = container.querySelector('.hidden-history-title');
+    const description = container.querySelector('.hidden-history-description');
+    const counter = container.querySelector('.carousel-counter');
+
+    function updateCarousel() {
+        const slide = slides[currentIndex];
+        image.src = slide.image;
+        image.alt = slide.alt;
+        title.textContent = slide.title;
+        description.textContent = slide.description;
+        counter.textContent = `${currentIndex + 1} / ${slides.length}`;
+    }
+
+    container.querySelector('[data-action="prev"]').addEventListener('click', () => {
+        currentIndex = (currentIndex - 1 + slides.length) % slides.length;
+        updateCarousel();
+    });
+
+    container.querySelector('[data-action="next"]').addEventListener('click', () => {
+        currentIndex = (currentIndex + 1) % slides.length;
+        updateCarousel();
+    });
+
+    updateCarousel();
+}
+
 function initRevealAnimations() {
     const animatedItems = document.querySelectorAll('main section, footer, main .brutal-border, main .border');
     animatedItems.forEach(item => item.classList.add('reveal'));
@@ -271,7 +315,8 @@ document.querySelectorAll('[data-tab]').forEach(button => {
 });
 
 document.querySelectorAll('.evidence-carousel').forEach(renderEvidenceCarousel);
-document.querySelectorAll('.composition-carousel').forEach(initCompositionCarousel);
+document.querySelectorAll('.composition-carousel:not(.hidden-history-carousel)').forEach(initCompositionCarousel);
+document.querySelectorAll('.hidden-history-carousel').forEach(initHiddenHistoryCarousel);
 
 if (salarySlider && salaryVal && calcNec && calcDes && calcAho) {
     salarySlider.addEventListener('input', event => {
