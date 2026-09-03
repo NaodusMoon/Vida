@@ -532,6 +532,23 @@
     line-height: 1.65;
 }
 
+.visceral-story-visual {
+    width: min(100%, 48rem);
+    margin: 0 auto;
+    overflow: hidden;
+    border: 2px solid #832C35;
+    border-radius: 0.9rem;
+    background: #2B1A1D;
+    box-shadow: 6px 6px 0 0 #832C35;
+}
+
+.visceral-story-visual img {
+    display: block;
+    width: 100%;
+    height: auto;
+    filter: saturate(0.98) contrast(1.02);
+}
+
 .evidence-frame {
     min-height: 520px;
     display: flex;
@@ -677,6 +694,10 @@
     .composition-frame img {
         width: min(100%, 420px);
         max-height: 560px;
+    }
+
+    .visceral-story-visual {
+        box-shadow: 4px 4px 0 0 #832C35;
     }
 
     .total-badge {
