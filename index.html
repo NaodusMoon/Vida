@@ -18,7 +18,7 @@
 <body class="bg-crema-light text-textdark font-sans selection:bg-vinotinto/20 selection:text-vinotinto-dark">
 
     <!-- HEADER / NAVIGATION -->
-    <header class="sticky top-0 z-50 bg-crema-light/90 backdrop-blur-md border-b-2 border-vinotinto">
+    <header class="sticky top-0 z-50 bg-crema-light border-b-2 border-vinotinto">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between">
             <a href="#inicio" class="font-display font-bold text-lg md:text-xl text-vinotinto-dark tracking-wider flex items-center gap-2">
                 <span class="text-vinotinto">&lt;</span>
@@ -26,50 +26,41 @@
                 <span class="text-vinotinto">&gt;</span>
             </a>
             
-            <!-- Desktop Nav -->
-            <nav class="hidden lg:flex items-center space-x-6 text-sm font-semibold tracking-wide">
-                <a href="#inicio" class="text-textdark hover:text-vinotinto transition-colors py-2">Inicio</a>
-                <a href="#proyecto-vida" class="text-textdark hover:text-vinotinto transition-colors py-2">Proyecto de Vida</a>
-                <a href="#costo-vida" class="text-textdark hover:text-vinotinto transition-colors py-2">Presupuesto</a>
-                <a href="#ingreso-requerido" class="text-textdark hover:text-vinotinto transition-colors py-2">Cifra Central</a>
-                <a href="#ruta-profesional" class="text-textdark hover:text-vinotinto transition-colors py-2">Ruta Profesional</a>
-                <a href="#formacion" class="text-textdark hover:text-vinotinto transition-colors py-2">Formación</a>
-                <a href="#evidencias" class="text-textdark hover:text-vinotinto transition-colors py-2">Evidencias IA</a>
-                <a href="#composicion-personal" class="text-textdark hover:text-vinotinto transition-colors py-2">Composición Personal</a>
-                <a href="#detras-de-la-vida" class="text-textdark hover:text-vinotinto transition-colors py-2">Detrás de mi Vida</a>
-                <a href="#momento-5" class="text-textdark hover:text-vinotinto transition-colors py-2">Momento 5</a>
-                <a href="#reflexion" class="text-crema-light hover:bg-vinotinto-dark bg-vinotinto px-4 py-2 rounded-lg brutal-shadow transition-all text-xs font-bold uppercase tracking-wider">Reflexión Final</a>
-            </nav>
-
-            <!-- Mobile Nav Toggle -->
-            <button id="mobile-menu-btn" class="lg:hidden text-vinotinto-dark focus:outline-none" aria-label="Abrir menú">
+            <!-- Navegación lateral -->
+            <button id="mobile-menu-btn" class="menu-toggle" aria-label="Abrir menú de navegación" aria-controls="mobile-menu" aria-expanded="false">
                 <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path id="menu-icon" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
                 </svg>
             </button>
         </div>
 
-        <!-- Mobile Menu Container -->
-        <div id="mobile-menu" class="hidden lg:hidden bg-crema border-b-2 border-vinotinto px-4 pt-2 pb-6 space-y-3">
-            <a href="#inicio" class="block text-textdark hover:text-vinotinto py-2 font-medium">Inicio</a>
-            <a href="#proyecto-vida" class="block text-textdark hover:text-vinotinto py-2 font-medium">Proyecto de Vida</a>
-            <a href="#costo-vida" class="block text-textdark hover:text-vinotinto py-2 font-medium">Presupuesto</a>
-            <a href="#ingreso-requerido" class="block text-textdark hover:text-vinotinto py-2 font-medium">Cifra Central</a>
-            <a href="#ruta-profesional" class="block text-textdark hover:text-vinotinto py-2 font-medium">Ruta Profesional</a>
-            <a href="#formacion" class="block text-textdark hover:text-vinotinto py-2 font-medium">Formación</a>
-            <a href="#evidencias" class="block text-textdark hover:text-vinotinto py-2 font-medium">Evidencias IA</a>
-            <a href="#composicion-personal" class="block text-textdark hover:text-vinotinto py-2 font-medium">Composición Personal</a>
-            <a href="#detras-de-la-vida" class="block text-textdark hover:text-vinotinto py-2 font-medium">Detrás de mi Vida</a>
-            <a href="#momento-5" class="block text-textdark hover:text-vinotinto py-2 font-medium">Momento 5</a>
-            <a href="#reflexion" class="block text-crema-light bg-vinotinto hover:bg-vinotinto-dark px-3 py-2 rounded font-semibold text-center border border-vinotinto">Reflexión Final</a>
-        </div>
+        <div id="menu-overlay" class="menu-overlay" aria-hidden="true"></div>
+        <nav id="mobile-menu" class="side-menu" aria-label="Navegación principal">
+            <div class="side-menu-header">
+                <span class="font-display font-bold text-vinotinto-dark tracking-wider">SECCIONES</span>
+                <button id="close-menu-btn" class="menu-close" type="button" aria-label="Cerrar menú">×</button>
+            </div>
+            <div class="side-menu-links">
+                <a href="#inicio" class="side-menu-link">Inicio</a>
+                <a href="#costo-vida" class="side-menu-link">Costo de mi estilo de vida</a>
+                <a href="#ruta-profesional" class="side-menu-link">Ruta profesional</a>
+                <a href="#reflexion" class="side-menu-link">Reflexión final</a>
+                <a href="#auditoria-critica" class="side-menu-link">Auditoría crítica</a>
+                <a href="#evidencias" class="side-menu-link">Evidencias</a>
+                <a href="#composicion-personal" class="side-menu-link">Cómo llegué a ser quien soy</a>
+                <a href="#detras-de-la-vida" class="side-menu-link">Qué hay detrás de la vida que estoy construyendo</a>
+                <a href="#momento-5" class="side-menu-link">Lo visceral de mi historia</a>
+                <a href="#lo-que-se" class="side-menu-link side-menu-link-featured">Lo que sé hacer también habla de mí</a>
+                <a href="#momento-7" class="side-menu-link">Momento 7 · Mi ruta de desarrollo</a>
+            </div>
+        </nav>
     </header>
 
     <!-- MAIN CONTAINER -->
     <main class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8 space-y-24">
 
         <!-- 1. PORTADA / INICIO -->
-        <section id="inicio" class="hero-section min-h-[80vh] flex flex-col justify-center items-center py-12 lg:py-20 relative">
+        <section id="inicio" class="hero-section min-h-[86vh] flex flex-col justify-center items-center py-12 lg:py-20 relative">
             <div class="hero-bg-video" aria-hidden="true">
                 <video autoplay muted loop playsinline poster="assets/img/life/japon-sakura.webp">
                     <source src="assets/video/hero-estefani.mp4" type="video/mp4">
@@ -794,6 +785,188 @@
             </div>
         </section>
 
+        <hr class="border-t border-vinotinto/20">
+
+        <!-- 12. AUDITORÍA CRÍTICA -->
+        <section id="auditoria-critica" class="py-12 scroll-mt-24">
+            <div class="text-center max-w-3xl mx-auto space-y-4 mb-12">
+                <span class="text-vinotinto font-mono font-semibold uppercase tracking-widest text-sm">Revisión del proyecto</span>
+                <h2 class="text-3xl sm:text-4xl font-display font-black tracking-tight text-vinotinto-dark">Auditoría crítica</h2>
+                <p class="text-softgray text-sm sm:text-base">Una revisión honesta de los alcances, decisiones y aspectos que todavía puedo fortalecer en mi proyecto de vida.</p>
+            </div>
+            <div class="audit-grid">
+                <article class="audit-card">
+                    <i data-lucide="search-check"></i>
+                    <h3>Lo que ya validé</h3>
+                    <p>Convertí mi estilo de vida ideal en gastos, metas de ingreso y decisiones concretas para que el plan sea más realista.</p>
+                </article>
+                <article class="audit-card">
+                    <i data-lucide="triangle-alert"></i>
+                    <h3>Lo que debo cuidar</h3>
+                    <p>Los precios, oportunidades laborales y prioridades pueden cambiar; por eso necesito revisar el presupuesto con frecuencia.</p>
+                </article>
+                <article class="audit-card">
+                    <i data-lucide="refresh-cw"></i>
+                    <h3>Mi siguiente ajuste</h3>
+                    <p>Seguir formándome, contrastar la información y adaptar mis decisiones sin perder de vista la vida que quiero construir.</p>
+                </article>
+            </div>
+        </section>
+
+        <hr class="border-t border-vinotinto/20">
+
+        <!-- 13. LO QUE SÉ HACER TAMBIÉN HABLA DE MÍ -->
+        <section id="lo-que-se" class="py-12 scroll-mt-24">
+            <div class="text-center max-w-3xl mx-auto space-y-4 mb-12">
+                <span class="text-vinotinto font-mono font-semibold uppercase tracking-widest text-sm">Una parte más de mi historia</span>
+                <h2 class="text-3xl sm:text-4xl font-display font-black tracking-tight text-vinotinto-dark">Lo que sé hacer también habla de mí</h2>
+            </div>
+            <figure class="skills-video-frame">
+                <video controls playsinline preload="metadata" aria-label="Video sobre lo que sé hacer">
+                    <source src="assets/video/lo-que-se-hacer.mp4" type="video/mp4">
+                    Tu navegador no puede reproducir este video.
+                </video>
+            </figure>
+        </section>
+
+        <hr class="border-t border-vinotinto/20">
+        <section id="momento-7" class="py-12 scroll-mt-24">
+            <div class="text-center max-w-3xl mx-auto space-y-4 mb-12">
+                <span class="text-vinotinto font-mono font-semibold uppercase tracking-widest text-sm">MOMENTO 7</span>
+                <h2 class="text-3xl sm:text-4xl font-display font-black tracking-tight text-vinotinto-dark">Del saber qué tengo a lo que puedo desarrollar</h2>
+            </div>
+            <nav class="matrix-index" aria-label="Matrices del Momento 7">
+<a href="#matriz-1">Matriz 1</a>
+<a href="#matriz-2">Matriz 2</a>
+<a href="#matriz-3">Matriz 3</a>
+<a href="#matriz-4">Matriz 4</a>
+<a href="#matriz-5">Matriz 5</a>
+<a href="#matriz-6">Matriz 6</a>
+<a href="#matriz-7">Matriz 7</a>
+<a href="#matriz-8">Matriz 8</a>
+<a href="#matriz-9">Matriz 9</a>
+<a href="#matriz-10">Matriz 10</a>
+<a href="#matriz-11">Matriz 11</a>
+</nav><div class="matrix-list">
+<article id="matriz-1" class="matrix-card scroll-mt-24"><header class="matrix-heading"><span class="matrix-number">01</span><h3>MATRIZ 1. RECONOCER EL PUNTO DE PARTIDA</h3></header><div class="matrix-carousel" role="region" aria-label="Galería de la matriz 1" aria-roledescription="carrusel" tabindex="0"><div class="matrix-stage">
+<figure class="matrix-slide" role="group" aria-label="1 de 1">
+<img src="assets/media/momento-7/matriz-1.jpg" alt="Matriz 1: Reconocer el punto de partida. Imagen 1." loading="lazy" decoding="async">
+</figure>
+</div>
+</div></article>
+<article id="matriz-2" class="matrix-card scroll-mt-24"><header class="matrix-heading"><span class="matrix-number">02</span><h3>MATRIZ 2. RECONOCER LO QUE YA HA DESARROLLADO</h3></header><div class="matrix-carousel" role="region" aria-label="Galería de la matriz 2" aria-roledescription="carrusel" tabindex="0"><div class="matrix-stage">
+<figure class="matrix-slide" role="group" aria-label="1 de 1">
+<img src="assets/media/momento-7/matriz-2.jpg" alt="Matriz 2: Reconocer lo que ya ha desarrollado. Imagen 1." loading="lazy" decoding="async">
+</figure>
+</div>
+</div></article>
+<article id="matriz-3" class="matrix-card scroll-mt-24"><header class="matrix-heading"><span class="matrix-number">03</span><h3>MATRIZ 3. DEFINIR EL SIGUIENTE NIVEL</h3></header><div class="matrix-carousel" role="region" aria-label="Galería de la matriz 3" aria-roledescription="carrusel" tabindex="0"><div class="matrix-stage">
+<figure class="matrix-slide" role="group" aria-label="1 de 1">
+<img src="assets/media/momento-7/matriz-3.jpg" alt="Matriz 3: Definir el siguiente nivel. Imagen 1." loading="lazy" decoding="async">
+</figure>
+</div>
+</div></article>
+<article id="matriz-4" class="matrix-card scroll-mt-24"><header class="matrix-heading"><span class="matrix-number">04</span><h3>MATRIZ 4. IDENTIFICAR LOS PUNTOS DE MEJORA</h3></header><div class="matrix-carousel" role="region" aria-label="Galería de la matriz 4" aria-roledescription="carrusel" tabindex="0"><div class="matrix-stage">
+<figure class="matrix-slide" role="group" aria-label="1 de 1">
+<img src="assets/media/momento-7/matriz-4.jpg" alt="Matriz 4: Identificar los puntos de mejora. Imagen 1." loading="lazy" decoding="async">
+</figure>
+</div>
+</div></article>
+<article id="matriz-5" class="matrix-card scroll-mt-24"><header class="matrix-heading"><span class="matrix-number">05</span><h3>MATRIZ 5. RECONOCER LOS PUNTOS DE ANCLAJE</h3></header><div class="matrix-carousel" role="region" aria-label="Galería de la matriz 5" aria-roledescription="carrusel" tabindex="0"><div class="matrix-stage">
+<figure class="matrix-slide" role="group" aria-label="1 de 3">
+<img src="assets/media/momento-7/matriz-5.jpg" alt="Matriz 5: Reconocer los puntos de anclaje. Imagen 1." loading="lazy" decoding="async">
+</figure>
+<figure class="matrix-slide" role="group" aria-label="2 de 3" hidden>
+<img src="assets/media/momento-7/matriz-5-1.jpg" alt="Matriz 5: Reconocer los puntos de anclaje. Imagen 2." loading="lazy" decoding="async">
+</figure>
+<figure class="matrix-slide" role="group" aria-label="3 de 3" hidden>
+<img src="assets/media/momento-7/matriz-5-2.jpg" alt="Matriz 5: Reconocer los puntos de anclaje. Imagen 3." loading="lazy" decoding="async">
+</figure>
+</div>
+<div class="matrix-controls"><button type="button" class="carousel-button" data-matrix-prev aria-label="Anterior en la matriz 5">← <span>Anterior</span></button><span class="carousel-counter" data-matrix-counter>1 / 3</span><button type="button" class="matrix-pause" data-matrix-pause aria-label="Pausar carrusel de la matriz 5">Pausar</button><button type="button" class="carousel-button" data-matrix-next aria-label="Siguiente en la matriz 5"><span>Siguiente</span> →</button></div>
+</div></article>
+<article id="matriz-6" class="matrix-card scroll-mt-24"><header class="matrix-heading"><span class="matrix-number">06</span><h3>MATRIZ 6. RECONOCER LAS OPORTUNIDADES DEL ENTORNO</h3></header><div class="matrix-carousel" role="region" aria-label="Galería de la matriz 6" aria-roledescription="carrusel" tabindex="0"><div class="matrix-stage">
+<figure class="matrix-slide" role="group" aria-label="1 de 2">
+<img src="assets/media/momento-7/matriz-6.jpg" alt="Matriz 6: Reconocer las oportunidades del entorno. Imagen 1." loading="lazy" decoding="async">
+</figure>
+<figure class="matrix-slide" role="group" aria-label="2 de 2" hidden>
+<img src="assets/media/momento-7/matriz-6-1.jpg" alt="Matriz 6: Reconocer las oportunidades del entorno. Imagen 2." loading="lazy" decoding="async">
+</figure>
+</div>
+<div class="matrix-controls"><button type="button" class="carousel-button" data-matrix-prev aria-label="Anterior en la matriz 6">← <span>Anterior</span></button><span class="carousel-counter" data-matrix-counter>1 / 2</span><button type="button" class="matrix-pause" data-matrix-pause aria-label="Pausar carrusel de la matriz 6">Pausar</button><button type="button" class="carousel-button" data-matrix-next aria-label="Siguiente en la matriz 6"><span>Siguiente</span> →</button></div>
+</div></article>
+<article id="matriz-7" class="matrix-card scroll-mt-24"><header class="matrix-heading"><span class="matrix-number">07</span><h3>MATRIZ 7. ANTICIPAR LAS DIFICULTADES</h3></header><div class="matrix-carousel" role="region" aria-label="Galería de la matriz 7" aria-roledescription="carrusel" tabindex="0"><div class="matrix-stage">
+<figure class="matrix-slide" role="group" aria-label="1 de 4">
+<video controls playsinline preload="metadata" aria-label="Video de la matriz 7"><source src="assets/media/momento-7/matriz-7.mp4" type="video/mp4">Tu navegador no puede reproducir este video. <a href="assets/media/momento-7/matriz-7.mp4">Abrir video</a></video>
+</figure>
+<figure class="matrix-slide" role="group" aria-label="2 de 4" hidden>
+<img src="assets/media/momento-7/matriz-7-1.jpg" alt="Matriz 7: Anticipar las dificultades. Imagen 2." loading="lazy" decoding="async">
+</figure>
+<figure class="matrix-slide" role="group" aria-label="3 de 4" hidden>
+<img src="assets/media/momento-7/matriz-7-2.jpg" alt="Matriz 7: Anticipar las dificultades. Imagen 3." loading="lazy" decoding="async">
+</figure>
+<figure class="matrix-slide" role="group" aria-label="4 de 4" hidden>
+<img src="assets/media/momento-7/matriz-7-3.jpg" alt="Matriz 7: Anticipar las dificultades. Imagen 4." loading="lazy" decoding="async">
+</figure>
+</div>
+<div class="matrix-controls"><button type="button" class="carousel-button" data-matrix-prev aria-label="Anterior en la matriz 7">← <span>Anterior</span></button><span class="carousel-counter" data-matrix-counter>1 / 4</span><button type="button" class="matrix-pause" data-matrix-pause aria-label="Pausar carrusel de la matriz 7">Pausar</button><button type="button" class="carousel-button" data-matrix-next aria-label="Siguiente en la matriz 7"><span>Siguiente</span> →</button></div>
+</div></article>
+<article id="matriz-8" class="matrix-card scroll-mt-24"><header class="matrix-heading"><span class="matrix-number">08</span><h3>MATRIZ 8. CONSTRUIR LA RUTA DE DESARROLLO</h3></header><div class="matrix-carousel" role="region" aria-label="Galería de la matriz 8" aria-roledescription="carrusel" tabindex="0"><div class="matrix-stage">
+<figure class="matrix-slide" role="group" aria-label="1 de 2">
+<img src="assets/media/momento-7/matriz-8.jpg" alt="Matriz 8: Construir la ruta de desarrollo. Imagen 1." loading="lazy" decoding="async">
+</figure>
+<figure class="matrix-slide" role="group" aria-label="2 de 2" hidden>
+<img src="assets/media/momento-7/matriz-8-1.jpg" alt="Matriz 8: Construir la ruta de desarrollo. Imagen 2." loading="lazy" decoding="async">
+</figure>
+</div>
+<div class="matrix-controls"><button type="button" class="carousel-button" data-matrix-prev aria-label="Anterior en la matriz 8">← <span>Anterior</span></button><span class="carousel-counter" data-matrix-counter>1 / 2</span><button type="button" class="matrix-pause" data-matrix-pause aria-label="Pausar carrusel de la matriz 8">Pausar</button><button type="button" class="carousel-button" data-matrix-next aria-label="Siguiente en la matriz 8"><span>Siguiente</span> →</button></div>
+</div></article>
+<article id="matriz-9" class="matrix-card scroll-mt-24"><header class="matrix-heading"><span class="matrix-number">09</span><h3>MATRIZ 9. DEFINIR EL PRIMER PASO REAL</h3></header><div class="matrix-carousel" role="region" aria-label="Galería de la matriz 9" aria-roledescription="carrusel" tabindex="0"><div class="matrix-stage">
+<figure class="matrix-slide" role="group" aria-label="1 de 2">
+<img src="assets/media/momento-7/matriz-9.jpg" alt="Matriz 9: Definir el primer paso real. Imagen 1." loading="lazy" decoding="async">
+</figure>
+<figure class="matrix-slide" role="group" aria-label="2 de 2" hidden>
+<img src="assets/media/momento-7/matriz-9-1.jpg" alt="Matriz 9: Definir el primer paso real. Imagen 2." loading="lazy" decoding="async">
+</figure>
+</div>
+<div class="matrix-controls"><button type="button" class="carousel-button" data-matrix-prev aria-label="Anterior en la matriz 9">← <span>Anterior</span></button><span class="carousel-counter" data-matrix-counter>1 / 2</span><button type="button" class="matrix-pause" data-matrix-pause aria-label="Pausar carrusel de la matriz 9">Pausar</button><button type="button" class="carousel-button" data-matrix-next aria-label="Siguiente en la matriz 9"><span>Siguiente</span> →</button></div>
+</div></article>
+<article id="matriz-10" class="matrix-card scroll-mt-24"><header class="matrix-heading"><span class="matrix-number">10</span><h3>MATRIZ 10. MI RUTA EN UNA SOLA MIRADA</h3></header><div class="matrix-carousel" role="region" aria-label="Galería de la matriz 10" aria-roledescription="carrusel" tabindex="0"><div class="matrix-stage">
+<figure class="matrix-slide" role="group" aria-label="1 de 4">
+<img src="assets/media/momento-7/matriz-10.jpg" alt="Matriz 10: Mi ruta en una sola mirada. Imagen 1." loading="lazy" decoding="async">
+</figure>
+<figure class="matrix-slide" role="group" aria-label="2 de 4" hidden>
+<img src="assets/media/momento-7/matriz-10-1.jpg" alt="Matriz 10: Mi ruta en una sola mirada. Imagen 2." loading="lazy" decoding="async">
+</figure>
+<figure class="matrix-slide" role="group" aria-label="3 de 4" hidden>
+<img src="assets/media/momento-7/matriz-10-2.jpg" alt="Matriz 10: Mi ruta en una sola mirada. Imagen 3." loading="lazy" decoding="async">
+</figure>
+<figure class="matrix-slide" role="group" aria-label="4 de 4" hidden>
+<img src="assets/media/momento-7/matriz-10-3.jpg" alt="Matriz 10: Mi ruta en una sola mirada. Imagen 4." loading="lazy" decoding="async">
+</figure>
+</div>
+<div class="matrix-controls"><button type="button" class="carousel-button" data-matrix-prev aria-label="Anterior en la matriz 10">← <span>Anterior</span></button><span class="carousel-counter" data-matrix-counter>1 / 4</span><button type="button" class="matrix-pause" data-matrix-pause aria-label="Pausar carrusel de la matriz 10">Pausar</button><button type="button" class="carousel-button" data-matrix-next aria-label="Siguiente en la matriz 10"><span>Siguiente</span> →</button></div>
+</div></article>
+<article id="matriz-11" class="matrix-card scroll-mt-24"><header class="matrix-heading"><span class="matrix-number">11</span><h3>MATRIZ 11. VERIFICACIÓN DE COHERENCIA</h3></header><div class="matrix-carousel" role="region" aria-label="Galería de la matriz 11" aria-roledescription="carrusel" tabindex="0"><div class="matrix-stage">
+<figure class="matrix-slide" role="group" aria-label="1 de 5">
+<img src="assets/media/momento-7/matriz-11.jpg" alt="Matriz 11: Verificación de coherencia. Imagen 1." loading="lazy" decoding="async">
+</figure>
+<figure class="matrix-slide" role="group" aria-label="2 de 5" hidden>
+<img src="assets/media/momento-7/matriz-11-1.jpg" alt="Matriz 11: Verificación de coherencia. Imagen 2." loading="lazy" decoding="async">
+</figure>
+<figure class="matrix-slide" role="group" aria-label="3 de 5" hidden>
+<img src="assets/media/momento-7/matriz-11-2.jpg" alt="Matriz 11: Verificación de coherencia. Imagen 3." loading="lazy" decoding="async">
+</figure>
+<figure class="matrix-slide" role="group" aria-label="4 de 5" hidden>
+<img src="assets/media/momento-7/matriz-11-3.jpg" alt="Matriz 11: Verificación de coherencia. Imagen 4." loading="lazy" decoding="async">
+</figure>
+<figure class="matrix-slide" role="group" aria-label="5 de 5" hidden>
+<img src="assets/media/momento-7/matriz-11-4.jpg" alt="Matriz 11: Verificación de coherencia. Imagen 5." loading="lazy" decoding="async">
+</figure>
+</div>
+<div class="matrix-controls"><button type="button" class="carousel-button" data-matrix-prev aria-label="Anterior en la matriz 11">← <span>Anterior</span></button><span class="carousel-counter" data-matrix-counter>1 / 5</span><button type="button" class="matrix-pause" data-matrix-pause aria-label="Pausar carrusel de la matriz 11">Pausar</button><button type="button" class="carousel-button" data-matrix-next aria-label="Siguiente en la matriz 11"><span>Siguiente</span> →</button></div>
+</div></article>
+</div></section>
     </main>
 
     <!-- FOOTER -->

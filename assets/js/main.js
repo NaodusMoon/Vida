@@ -1,6 +1,8 @@
 const mobileMenuBtn = document.getElementById('mobile-menu-btn');
 const mobileMenu = document.getElementById('mobile-menu');
 const menuIcon = document.getElementById('menu-icon');
+const menuOverlay = document.getElementById('menu-overlay');
+const closeMenuBtn = document.getElementById('close-menu-btn');
 const salarySlider = document.getElementById('salarySlider');
 const salaryVal = document.getElementById('salaryVal');
 const calcNec = document.getElementById('calcNec');
@@ -78,8 +80,37 @@ function formatCurrency(amount) {
 }
 
 function closeMobileMenu() {
-    mobileMenu.classList.add('hidden');
+    mobileMenu?.classList.remove('is-open');
+    menuOverlay?.classList.remove('is-visible');
+    document.body.classList.remove('menu-open');
+    mobileMenuBtn?.setAttribute('aria-expanded', 'false');
     menuIcon.setAttribute('d', 'M4 6h16M4 12h16M4 18h16');
+}
+
+function openMobileMenu() {
+    mobileMenu?.classList.add('is-open');
+    menuOverlay?.classList.add('is-visible');
+    document.body.classList.add('menu-open');
+    mobileMenuBtn?.setAttribute('aria-expanded', 'true');
+    menuIcon.setAttribute('d', 'M6 18L18 6M6 6l12 12');
+}
+
+function navigateToSection(event) {
+    const href = event.currentTarget.getAttribute('href');
+    const target = href ? document.querySelector(href) : null;
+    if (!target) {
+        return;
+    }
+
+    event.preventDefault();
+    closeMobileMenu();
+
+    window.setTimeout(() => {
+        const headerHeight = document.querySelector('header')?.offsetHeight ?? 0;
+        const targetTop = target.getBoundingClientRect().top + window.scrollY - headerHeight - 18;
+        window.scrollTo({ top: Math.max(0, targetTop), behavior: 'smooth' });
+        window.history.pushState(null, '', href);
+    }, 40);
 }
 
 function switchTab(tabId) {
@@ -246,8 +277,48 @@ function initHiddenHistoryCarousel(container) {
     updateCarousel();
 }
 
+function orderPageSections() {
+    const main = document.querySelector('main');
+    if (!main) {
+        return;
+    }
+
+    const sectionOrder = [
+        'inicio',
+        'proyecto-vida',
+        'costo-vida',
+        'ingreso-requerido',
+        'ruta-profesional',
+        'formacion',
+        'reflexion',
+        'auditoria-critica',
+        'evidencias',
+        'composicion-personal',
+        'detras-de-la-vida',
+        'momento-5',
+        'lo-que-se',
+        'momento-7'
+    ];
+    const orderedContent = document.createDocumentFragment();
+
+    sectionOrder.forEach(sectionId => {
+        const section = document.getElementById(sectionId);
+        if (!section) {
+            return;
+        }
+
+        const divider = section.nextElementSibling;
+        orderedContent.append(section);
+        if (divider?.tagName === 'HR') {
+            orderedContent.append(divider);
+        }
+    });
+
+    main.append(orderedContent);
+}
+
 function initRevealAnimations() {
-    const animatedItems = document.querySelectorAll('main section, footer, main .brutal-border, main .border');
+    const animatedItems = document.querySelectorAll('main .brutal-border, main .border, footer');
     animatedItems.forEach(item => item.classList.add('reveal'));
 
     const cardItems = document.querySelectorAll('main .brutal-border, main .border, footer');
@@ -296,23 +367,31 @@ function initBudgetTable() {
 
 if (mobileMenuBtn && mobileMenu && menuIcon) {
     mobileMenuBtn.addEventListener('click', () => {
-        mobileMenu.classList.toggle('hidden');
-
-        if (mobileMenu.classList.contains('hidden')) {
-            menuIcon.setAttribute('d', 'M4 6h16M4 12h16M4 18h16');
+        if (mobileMenu.classList.contains('is-open')) {
+            closeMobileMenu();
         } else {
-            menuIcon.setAttribute('d', 'M6 18L18 6M6 6l12 12');
+            openMobileMenu();
         }
     });
 
     document.querySelectorAll('#mobile-menu a').forEach(link => {
-        link.addEventListener('click', closeMobileMenu);
+        link.addEventListener('click', navigateToSection);
+    });
+
+    closeMenuBtn?.addEventListener('click', closeMobileMenu);
+    menuOverlay?.addEventListener('click', closeMobileMenu);
+    document.addEventListener('keydown', event => {
+        if (event.key === 'Escape') {
+            closeMobileMenu();
+        }
     });
 }
 
 document.querySelectorAll('[data-tab]').forEach(button => {
     button.addEventListener('click', () => switchTab(button.dataset.tab));
 });
+
+orderPageSections();
 
 document.querySelectorAll('.evidence-carousel').forEach(renderEvidenceCarousel);
 document.querySelectorAll('.composition-carousel:not(.hidden-history-carousel)').forEach(initCompositionCarousel);
@@ -334,6 +413,63 @@ if (salarySlider && salaryVal && calcNec && calcDes && calcAho) {
 
 initRevealAnimations();
 initBudgetTable();
+
+// Each matrix advances only while visible and available for viewing.
+document.querySelectorAll('.matrix-carousel').forEach(carousel => {
+    const slides = [...carousel.querySelectorAll('.matrix-slide')];
+    if (slides.length < 2) return;
+    const pauseButton = carousel.querySelector('[data-matrix-pause]');
+    const reducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)');
+    let index = 0;
+    let paused = reducedMotion.matches;
+    let visible = false;
+    let hovered = false;
+    let timer;
+    const schedule = () => {
+        clearTimeout(timer);
+        const video = slides[index].querySelector('video');
+        if (paused || !visible || hovered || document.hidden || carousel.contains(document.activeElement) || (video && !video.paused && !video.ended)) return;
+        timer = setTimeout(() => show(index + 1), video ? 12000 : 6500);
+    };
+    const show = next => {
+        slides[index].querySelector('video')?.pause();
+        slides[index].hidden = true;
+        index = (next + slides.length) % slides.length;
+        slides[index].hidden = false;
+        carousel.querySelector('[data-matrix-counter]').textContent = `${index + 1} / ${slides.length}`;
+        schedule();
+    };
+    const updatePause = () => {
+        pauseButton.textContent = paused ? 'Reanudar' : 'Pausar';
+        pauseButton.setAttribute('aria-label', `${paused ? 'Reanudar' : 'Pausar'} ${carousel.getAttribute('aria-label')}`);
+        schedule();
+    };
+    carousel.querySelector('[data-matrix-prev]').addEventListener('click', () => show(index - 1));
+    carousel.querySelector('[data-matrix-next]').addEventListener('click', () => show(index + 1));
+    pauseButton.addEventListener('click', () => { paused = !paused; updatePause(); });
+    carousel.addEventListener('keydown', event => {
+        if (event.target.tagName === 'VIDEO') return;
+        if (event.key === 'ArrowLeft' || event.key === 'ArrowRight') {
+            event.preventDefault();
+            show(index + (event.key === 'ArrowLeft' ? -1 : 1));
+        }
+    });
+    carousel.addEventListener('mouseenter', () => { hovered = true; schedule(); });
+    carousel.addEventListener('mouseleave', () => { hovered = false; schedule(); });
+    carousel.addEventListener('focusin', schedule);
+    carousel.addEventListener('focusout', () => setTimeout(schedule, 0));
+    carousel.querySelectorAll('video').forEach(video => {
+        ['play', 'pause', 'ended'].forEach(event => video.addEventListener(event, schedule));
+    });
+    document.addEventListener('visibilitychange', schedule);
+    reducedMotion.addEventListener('change', () => { paused = reducedMotion.matches; updatePause(); });
+    new IntersectionObserver(entries => {
+        visible = entries[0].isIntersecting;
+        if (!visible) slides[index].querySelector('video')?.pause();
+        schedule();
+    }, { threshold: 0.15 }).observe(carousel);
+    updatePause();
+});
 
 if (window.lucide) {
     window.lucide.createIcons();
