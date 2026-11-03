@@ -298,7 +298,8 @@ function orderPageSections() {
         'momento-5',
         'lo-que-se',
         'momento-7',
-        'trabajo-final'
+        'trabajo-final',
+        'momento-8'
     ];
     const orderedContent = document.createDocumentFragment();
 
