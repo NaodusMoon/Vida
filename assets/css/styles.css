@@ -1037,3 +1037,13 @@ body {
     font-weight: 700;
     text-align: center;
 }
+
+.quantitative-video {
+    max-width: 38rem;
+    background: #2B1A1D;
+}
+.quantitative-video video {
+    display: block;
+    width: 100%;
+    height: auto;
+}
