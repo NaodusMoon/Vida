@@ -1024,7 +1024,8 @@ body {
     box-shadow: 5px 5px 0 #832C35;
     overflow: hidden;
 }
-.final-carousel .matrix-slide img {
+.final-carousel .matrix-slide img,
+.final-carousel .matrix-slide video {
     display: block;
     width: 100%;
     height: auto;
