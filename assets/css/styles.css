@@ -731,6 +731,12 @@ body {
     box-shadow: 5px 5px 0 0 #832C35;
 }
 
+.trabajo-final-card--wide {
+    grid-column: 1 / -1;
+    width: min(100%, 68rem);
+    justify-self: center;
+}
+
 .trabajo-final-card img {
     display: block;
     width: 100%;
