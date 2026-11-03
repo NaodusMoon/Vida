@@ -1014,7 +1014,7 @@ body {
 .matrix-carousel:focus-visible, .matrix-controls button:focus-visible, .matrix-index a:focus-visible { outline: 3px solid #A65B65; outline-offset: -3px; }
 @media (max-width: 480px) { .matrix-heading { padding: 1rem; } .matrix-controls { padding: .75rem; } .matrix-controls .carousel-button { padding: .7rem; } .matrix-controls .carousel-button span { display: none; } }
 
-/* Document galleries in Trabajo final: full images and controls always in view. */
+/* Document galleries follow each image's natural proportions at full width. */
 .final-carousel {
     max-width: 68rem;
     margin: 0 auto;
@@ -1025,8 +1025,9 @@ body {
     overflow: hidden;
 }
 .final-carousel .matrix-slide img {
-    height: clamp(12rem, 58svh, 44rem);
-    object-fit: contain;
+    display: block;
+    width: 100%;
+    height: auto;
 }
 .final-carousel figcaption {
     padding: .75rem 1rem;
