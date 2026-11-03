@@ -297,7 +297,8 @@ function orderPageSections() {
         'detras-de-la-vida',
         'momento-5',
         'lo-que-se',
-        'momento-7'
+        'momento-7',
+        'trabajo-final'
     ];
     const orderedContent = document.createDocumentFragment();
 
